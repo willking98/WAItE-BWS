@@ -10,7 +10,8 @@ theme: custom.scss
 #| warning: false
 #| message: false
 
-# remotes::install_github("jhelvy/surveydown")
+# devtools::load_all("../surveydown")
+# remotes::install_github("jhelvy/surveydown", force = TRUE)
 library(surveydown)
 library(tidyverse)
 library(glue)
@@ -702,7 +703,12 @@ config <- sd_config(
     "screenout",          "blue",          "end_screenout",
     "consent_age",        "no",            "end_consent",
     "consent_understand", "no",            "end_consent"
-  )
+  ),
+  show_if = tibble::tribble(
+    ~question_id,         ~question_value, ~target,
+    "like_fruit",         "yes",           "fav_fruit",
+    "like_fruit",         "kind_of",       "fav_fruit"
+  )  
 )
 
 sd_server(
