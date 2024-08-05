@@ -16,10 +16,10 @@ filters: [surveydown]
 # remotes::install_github("jhelvy/surveydown", force = TRUE)
 
 # Load the package locally:
-devtools::load_all("../surveydown")
+# devtools::load_all("../surveydown")
 
 # Load the package from library:
-# library(surveydown)
+library(surveydown)
 
 # Load other necessary packages:
 library(tidyverse)
