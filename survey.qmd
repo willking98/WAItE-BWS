@@ -1,7 +1,6 @@
 ---
 server: shiny
 filters: [surveydown]
-theme: custom.scss
 ---
 
 ```{r}
@@ -708,7 +707,8 @@ config <- sd_config(
     ~question_id,         ~question_value, ~target,
     "like_fruit",         "yes",           "fav_fruit",
     "like_fruit",         "kind_of",       "fav_fruit"
-  )  
+  ),
+  show_all_pages = TRUE
 )
 
 sd_server(
