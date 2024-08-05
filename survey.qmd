@@ -10,9 +10,9 @@ theme: custom.scss
 #| warning: false
 #| message: false
 
-# devtools::load_all("../surveydown")
+devtools::load_all("../surveydown")
 # remotes::install_github("jhelvy/surveydown", force = TRUE)
-library(surveydown)
+# library(surveydown)
 library(tidyverse)
 library(glue)
 sd_setup()
@@ -29,7 +29,7 @@ sd_next(next_page = 'consent')
 :::
 
 ::: {#consent .sd-page}
-# Consent Page
+# Consent
 
 This survey is being conducted by students at The George Washing University. We will not be collecting any identifying data, such as your name or address. The whole survey will take approximately 10 to 15 minutes to complete. Your participation is voluntary and you may stop the survey at any time.
 
