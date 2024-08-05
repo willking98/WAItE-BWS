@@ -9,11 +9,23 @@ filters: [surveydown]
 #| warning: false
 #| message: false
 
-devtools::load_all("../surveydown")
+# Run this in your Terminal to install the Quarto extension:
+# quarto install extension jhelvy/surveydown-ext
+
+# Run this in your Console to install the R package:
 # remotes::install_github("jhelvy/surveydown", force = TRUE)
+
+# Load the package locally:
+devtools::load_all("../surveydown")
+
+# Load the package from library:
 # library(surveydown)
+
+# Load other necessary packages:
 library(tidyverse)
 library(glue)
+
+# This is essential to the survey:
 sd_setup()
 ```
 
@@ -708,7 +720,8 @@ config <- sd_config(
     "like_fruit",         "yes",           "fav_fruit",
     "like_fruit",         "kind_of",       "fav_fruit"
   ),
-  show_all_pages = TRUE
+  preview = TRUE,
+  show_all_pages = FALSE
 )
 
 sd_server(
