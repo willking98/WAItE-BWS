@@ -9,17 +9,20 @@ filters: [surveydown]
 #| warning: false
 #| message: false
 
-# Run this in your Terminal to install the Quarto extension:
-# quarto install extension jhelvy/surveydown-ext
-
 # Run this in your Console to install the R package:
 # remotes::install_github("jhelvy/surveydown", force = TRUE)
 
-# Load the package locally
-devtools::load_all("../surveydown")
+# Run this in your Terminal to install the Quarto extension:
+# quarto install extension jhelvy/surveydown-ext
+
+# Or, run this to install t he Quarto extension:
+# surveydown::sd_update_extension()
 
 # Load the package from library:
-# library(surveydown)
+library(surveydown)
+
+# Or, load the package locally:
+# devtools::load_all("../surveydown")
 
 # Load other necessary packages:
 library(tidyverse)
@@ -701,6 +704,8 @@ The survey is now finished. You may close the window.
 # To set the password, run usethis::edit_r_environ()
 # Then, type SUPABASE_PASSWORD=your_password
 # No quotation needed
+# Finally, restart R session by Session -> Restart R
+# Shortcut for restarting R: cmd+shift+0 (Mac), ctrl+shift+F10 (Win)
 
 db <- sd_database(
   host       = "aws-0-us-east-1.pooler.supabase.com",
