@@ -846,15 +846,16 @@ The survey is now finished. You may close the window.
 # Finally, restart R session by Session -> Restart R
 # Shortcut for restarting R: cmd+shift+0 (Mac), ctrl+shift+F10 (Win)
 
-# db <- sd_database(
-#   host       = "aws-0-us-east-1.pooler.supabase.com",
-#   db_name    = "postgres",
-#   port       = "6543",
-#   user       = "postgres.hwumdvjnymbrgeemvrhq",
-#   table_name = "apple",
-#   password   = Sys.getenv("SUPABASE_PASSWORD")
-# )
-db <- sd_database()
+db <- sd_database(
+  host       = "aws-0-us-east-1.pooler.supabase.com",
+  db_name    = "postgres",
+  port       = "6543",
+  user       = "postgres.hwumdvjnymbrgeemvrhq",
+  table_name = "apple",
+  password   = Sys.getenv("SUPABASE_PASSWORD"),
+  gssencmode = "disable"
+)
+# db <- sd_database()
 
 config <- sd_config(
   skip_if = tibble::tribble(
@@ -867,8 +868,7 @@ config <- sd_config(
     ~question_id,         ~question_value, ~target,
     "like_fruit",         "yes",           "fav_fruit",
     "like_fruit",         "kind_of",       "fav_fruit"
-  ), 
-  start_page = "demographics"
+  )
 )
 
 sd_server(
