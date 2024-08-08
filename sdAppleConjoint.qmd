@@ -15,11 +15,11 @@ filters: [surveydown]
 # Run this in your Console to install the R package:
 # remotes::install_github("jhelvy/surveydown", force = TRUE)
 
-# Load the package locally:
-# devtools::load_all("../surveydown")
+# Load the package locally
+devtools::load_all("../surveydown")
 
 # Load the package from library:
-library(surveydown)
+# library(surveydown)
 
 # Load other necessary packages:
 library(tidyverse)
@@ -698,15 +698,19 @@ The survey is now finished. You may close the window.
 ```{r}
 #| context: server
 
-#This is what the user has to input
-# db <- sd_database(
-#   host = "aws-0-us-west-1.pooler.supabase.com",
-#   db_name = "postgres",
-#   port = "6543",
-#   user = "postgres.kjxxpyqplqvtqqxrxmzi",
-#   table_name = "Testing1",
-#   password   = Sys.getenv("SUPABASE_PASSWORD")
-# )
+# To set the password, run usethis::edit_r_environ()
+# Then, type SUPABASE_PASSWORD=your_password
+# No quotation needed
+
+db <- sd_database(
+  host       = "aws-0-us-east-1.pooler.supabase.com",
+  db_name    = "postgres",
+  port       = "6543",
+  user       = "postgres.hwumdvjnymbrgeemvrhq",
+  table_name = "apple",
+  password   = Sys.getenv("SUPABASE_PASSWORD"),
+  gssencmode = "disable" # Set to "disable" if there is connection error
+)
 
 config <- sd_config(
   skip_if = tibble::tribble(
@@ -719,15 +723,13 @@ config <- sd_config(
     ~question_id,         ~question_value, ~target,
     "like_fruit",         "yes",           "fav_fruit",
     "like_fruit",         "kind_of",       "fav_fruit"
-  ),
-  preview = TRUE,
-  show_all_pages = FALSE
+  )
 )
 
 sd_server(
   input   = input,
   session = session,
-  config  = config
-  # db      = db
+  config  = config,
+  db      = db
 )
 ```
