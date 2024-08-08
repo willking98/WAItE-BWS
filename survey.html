@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.549">
+<meta name="generator" content="quarto-1.4.550">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>sdappleconjoint</title>
+<title>survey</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,19 +23,19 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="sdAppleConjoint_files/libs/clipboard/clipboard.min.js"></script>
-<script src="sdAppleConjoint_files/libs/quarto-html/quarto.js"></script>
-<script src="sdAppleConjoint_files/libs/quarto-html/popper.min.js"></script>
-<script src="sdAppleConjoint_files/libs/quarto-html/tippy.umd.min.js"></script>
-<script src="sdAppleConjoint_files/libs/quarto-html/anchor.min.js"></script>
-<link href="sdAppleConjoint_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="sdAppleConjoint_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="sdAppleConjoint_files/libs/bootstrap/bootstrap.min.js"></script>
-<link href="sdAppleConjoint_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="sdAppleConjoint_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-<script src="sdAppleConjoint_files/libs/quarto-contrib/hidepagesjs/hide_pages.js"></script>
-<script src="sdAppleConjoint_files/libs/quarto-contrib/updateprogressjs/update_progress.js"></script>
-<link href="sdAppleConjoint_files/libs/quarto-contrib/surveydowncss/surveydown.css" rel="stylesheet">
+<script src="survey_files/libs/clipboard/clipboard.min.js"></script>
+<script src="survey_files/libs/quarto-html/quarto.js"></script>
+<script src="survey_files/libs/quarto-html/popper.min.js"></script>
+<script src="survey_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="survey_files/libs/quarto-html/anchor.min.js"></script>
+<link href="survey_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="survey_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="survey_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="survey_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="survey_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="survey_files/libs/quarto-contrib/hidepagesjs/hide_pages.js"></script>
+<script src="survey_files/libs/quarto-contrib/updateprogressjs/update_progress.js"></script>
+<link href="survey_files/libs/quarto-contrib/surveydowncss/surveydown.css" rel="stylesheet">
 
 
 </head>
@@ -128,28 +128,6 @@ Shiny.addCustomMessageHandler('shinyjs-refresh', function(params) { shinyjs.debu
 <div class="radio">
 <label>
 <input type="radio" name="consent_age" value="no">
-<span>No</span>
-</label>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell-output-display">
-<div id="container- test_1" data-question-id="test_1" data-required="true" class="question-container">
-<div id="test_1" style="width:100%;" class="form-group shiny-input-radiogroup shiny-input-container" role="radiogroup" aria-labelledby="test_1-label">
-<label class="control-label" id="test_1-label" for="test_1"><p>This is a question <span style="color: red; font-size: 1.5em; vertical-align: middle; position: relative; top: 0.1em;">*</span></p>
-</label>
-<div class="shiny-options-group">
-<div class="radio">
-<label>
-<input type="radio" name="test_1" value="yes">
-<span>Yes</span>
-</label>
-</div>
-<div class="radio">
-<label>
-<input type="radio" name="test_1" value="no">
 <span>No</span>
 </label>
 </div>
@@ -296,6 +274,7 @@ Shiny.addCustomMessageHandler('shinyjs-refresh', function(params) { shinyjs.debu
 <section id="type" class="level2">
 <h2 class="anchored" data-anchor-id="type">Type</h2>
 <p>We will show five different types of apples:</p>
+<div style="width: 500px;">
 <table class="table">
 <colgroup>
 <col style="width: 10%">
@@ -315,14 +294,15 @@ Shiny.addCustomMessageHandler('shinyjs-refresh', function(params) { shinyjs.debu
 </thead>
 <tbody>
 <tr class="odd">
-<td><img src="https://raw.githubusercontent.com/jhelvy/formr4conjoint/master/survey/images/fuji.jpg" width="100"></td>
-<td><img src="https://raw.githubusercontent.com/jhelvy/formr4conjoint/master/survey/images/gala.jpg" width="100"></td>
-<td><img src="https://raw.githubusercontent.com/jhelvy/formr4conjoint/master/survey/images/honeycrisp.jpg" width="100"></td>
-<td><img src="https://raw.githubusercontent.com/jhelvy/formr4conjoint/master/survey/images/pinkLady.jpg" width="100"></td>
-<td><img src="https://raw.githubusercontent.com/jhelvy/formr4conjoint/master/survey/images/redDelicious.jpg" width="100"></td>
+<td><img src="/images/fuji.jpg" width="100"></td>
+<td><img src="/images/gala.jpg" width="100"></td>
+<td><img src="/images/honeycrisp.jpg" width="100"></td>
+<td><img src="images/pinkLady.jpg" width="100"></td>
+<td><img src="/images/redDelicious.jpg" width="100"></td>
 </tr>
 </tbody>
 </table>
+</div>
 <div class="cell">
 <div class="cell-output-display">
 <button id="next-cbc_practice" type="button" class="btn btn-default action-button" style="display: block; margin: auto;" onclick="Shiny.setInputValue('next_page', 'cbc_practice');">Next</button>
@@ -345,11 +325,11 @@ Shiny.addCustomMessageHandler('shinyjs-refresh', function(params) { shinyjs.debu
 <div id="cbc_practice" class="radio-group-buttons">
 <div aria-labelledby="cbc_practice-label" class="btn-group btn-group-container-sw" data-toggle="buttons" role="group">
 <input type="radio" autocomplete="off" id="cbc_practice1" name="cbc_practice" value="option_1" class="btn-check">
-<label class="btn radiobtn btn-outline-primary" for="cbc_practice1"><strong>Option 1</strong><br><img src="https://raw.githubusercontent.com/jhelvy/formr4conjoint/master/survey/images/fuji.jpg" width="100"><br><strong>Type</strong>: Fuji<br><strong>Price</strong>: $ 2 / lb<br><strong>Freshness</strong>: Average</label>
+<label class="btn radiobtn btn-outline-primary" for="cbc_practice1"><strong>Option 1</strong><br><img src="/images/fuji.jpg" width="100"><br><strong>Type</strong>: Fuji<br><strong>Price</strong>: $ 2 / lb<br><strong>Freshness</strong>: Average</label>
 <input type="radio" autocomplete="off" id="cbc_practice2" name="cbc_practice" value="option_2" class="btn-check">
-<label class="btn radiobtn btn-outline-primary" for="cbc_practice2"><strong>Option 2</strong><br><img src="https://raw.githubusercontent.com/jhelvy/formr4conjoint/master/survey/images/pinkLady.jpg" width="100"><br><strong>Type</strong>: Pink Lady<br><strong>Price</strong>: $ 1.5 / lb<br><strong>Freshness</strong>: Excellent</label>
+<label class="btn radiobtn btn-outline-primary" for="cbc_practice2"><strong>Option 2</strong><br><img src="/images/pinkLady.jpg" width="100"><br><strong>Type</strong>: Pink Lady<br><strong>Price</strong>: $ 1.5 / lb<br><strong>Freshness</strong>: Excellent</label>
 <input type="radio" autocomplete="off" id="cbc_practice3" name="cbc_practice" value="option_3" class="btn-check">
-<label class="btn radiobtn btn-outline-primary" for="cbc_practice3"><strong>Option 3</strong><br><img src="https://raw.githubusercontent.com/jhelvy/formr4conjoint/master/survey/images/honeycrisp.jpg" width="100"><br><strong>Type</strong>: Honeycrisp<br><strong>Price</strong>: $ 2 / lb<br><strong>Freshness</strong>: Poor</label>
+<label class="btn radiobtn btn-outline-primary" for="cbc_practice3"><strong>Option 3</strong><br><img src="/images/honeycrisp.jpg" width="100"><br><strong>Type</strong>: Honeycrisp<br><strong>Price</strong>: $ 2 / lb<br><strong>Freshness</strong>: Poor</label>
 </div>
 </div>
 </div>
@@ -389,11 +369,11 @@ Shiny.addCustomMessageHandler('shinyjs-refresh', function(params) { shinyjs.debu
 <div id="cbc_q1" class="radio-group-buttons">
 <div aria-labelledby="cbc_q1-label" class="btn-group btn-group-container-sw" data-toggle="buttons" role="group">
 <input type="radio" autocomplete="off" id="cbc_q11" name="cbc_q1" value="option_1" class="btn-check">
-<label class="btn radiobtn btn-outline-primary" for="cbc_q11"><strong>Option 1</strong><br><img src="https://raw.githubusercontent.com/jhelvy/formr4conjoint/master/survey/images/redDelicious.jpg" width="100"><br><strong>Type</strong>: Red Delicious<br><strong>Price</strong>: 2.5<br><strong>Freshness</strong>: Poor</label>
+<label class="btn radiobtn btn-outline-primary" for="cbc_q11"><strong>Option 1</strong><br><img src="/images/pinkLady.jpg" width="100"><br><strong>Type</strong>: Pink Lady<br><strong>Price</strong>: 1.5<br><strong>Freshness</strong>: Poor</label>
 <input type="radio" autocomplete="off" id="cbc_q12" name="cbc_q1" value="option_2" class="btn-check">
-<label class="btn radiobtn btn-outline-primary" for="cbc_q12"><strong>Option 2</strong><br><img src="https://raw.githubusercontent.com/jhelvy/formr4conjoint/master/survey/images/honeycrisp.jpg" width="100"><br><strong>Type</strong>: Honeycrisp<br><strong>Price</strong>: 4<br><strong>Freshness</strong>: Excellent</label>
+<label class="btn radiobtn btn-outline-primary" for="cbc_q12"><strong>Option 2</strong><br><img src="/images/redDelicious.jpg" width="100"><br><strong>Type</strong>: Red Delicious<br><strong>Price</strong>: 3.5<br><strong>Freshness</strong>: Poor</label>
 <input type="radio" autocomplete="off" id="cbc_q13" name="cbc_q1" value="option_3" class="btn-check">
-<label class="btn radiobtn btn-outline-primary" for="cbc_q13"><strong>Option 3</strong><br><img src="https://raw.githubusercontent.com/jhelvy/formr4conjoint/master/survey/images/redDelicious.jpg" width="100"><br><strong>Type</strong>: Red Delicious<br><strong>Price</strong>: 1<br><strong>Freshness</strong>: Excellent</label>
+<label class="btn radiobtn btn-outline-primary" for="cbc_q13"><strong>Option 3</strong><br><img src="/images/pinkLady.jpg" width="100"><br><strong>Type</strong>: Pink Lady<br><strong>Price</strong>: 3.5<br><strong>Freshness</strong>: Excellent</label>
 </div>
 </div>
 </div>
@@ -421,11 +401,11 @@ Shiny.addCustomMessageHandler('shinyjs-refresh', function(params) { shinyjs.debu
 <div id="cbc_q2" class="radio-group-buttons">
 <div aria-labelledby="cbc_q2-label" class="btn-group btn-group-container-sw" data-toggle="buttons" role="group">
 <input type="radio" autocomplete="off" id="cbc_q21" name="cbc_q2" value="option_1" class="btn-check">
-<label class="btn radiobtn btn-outline-primary" for="cbc_q21"><strong>Option 1</strong><br><img src="https://raw.githubusercontent.com/jhelvy/formr4conjoint/master/survey/images/gala.jpg" width="100"><br><strong>Type</strong>: Gala<br><strong>Price</strong>: 2<br><strong>Freshness</strong>: Average</label>
+<label class="btn radiobtn btn-outline-primary" for="cbc_q21"><strong>Option 1</strong><br><img src="/images/gala.jpg" width="100"><br><strong>Type</strong>: Gala<br><strong>Price</strong>: 2<br><strong>Freshness</strong>: Average</label>
 <input type="radio" autocomplete="off" id="cbc_q22" name="cbc_q2" value="option_2" class="btn-check">
-<label class="btn radiobtn btn-outline-primary" for="cbc_q22"><strong>Option 2</strong><br><img src="https://raw.githubusercontent.com/jhelvy/formr4conjoint/master/survey/images/gala.jpg" width="100"><br><strong>Type</strong>: Gala<br><strong>Price</strong>: 1<br><strong>Freshness</strong>: Poor</label>
+<label class="btn radiobtn btn-outline-primary" for="cbc_q22"><strong>Option 2</strong><br><img src="/images/redDelicious.jpg" width="100"><br><strong>Type</strong>: Red Delicious<br><strong>Price</strong>: 1.5<br><strong>Freshness</strong>: Average</label>
 <input type="radio" autocomplete="off" id="cbc_q23" name="cbc_q2" value="option_3" class="btn-check">
-<label class="btn radiobtn btn-outline-primary" for="cbc_q23"><strong>Option 3</strong><br><img src="https://raw.githubusercontent.com/jhelvy/formr4conjoint/master/survey/images/fuji.jpg" width="100"><br><strong>Type</strong>: Fuji<br><strong>Price</strong>: 4<br><strong>Freshness</strong>: Average</label>
+<label class="btn radiobtn btn-outline-primary" for="cbc_q23"><strong>Option 3</strong><br><img src="/images/pinkLady.jpg" width="100"><br><strong>Type</strong>: Pink Lady<br><strong>Price</strong>: 3.5<br><strong>Freshness</strong>: Poor</label>
 </div>
 </div>
 </div>
@@ -453,11 +433,11 @@ Shiny.addCustomMessageHandler('shinyjs-refresh', function(params) { shinyjs.debu
 <div id="cbc_q3" class="radio-group-buttons">
 <div aria-labelledby="cbc_q3-label" class="btn-group btn-group-container-sw" data-toggle="buttons" role="group">
 <input type="radio" autocomplete="off" id="cbc_q31" name="cbc_q3" value="option_1" class="btn-check">
-<label class="btn radiobtn btn-outline-primary" for="cbc_q31"><strong>Option 1</strong><br><img src="https://raw.githubusercontent.com/jhelvy/formr4conjoint/master/survey/images/honeycrisp.jpg" width="100"><br><strong>Type</strong>: Honeycrisp<br><strong>Price</strong>: 1<br><strong>Freshness</strong>: Average</label>
+<label class="btn radiobtn btn-outline-primary" for="cbc_q31"><strong>Option 1</strong><br><img src="/images/honeycrisp.jpg" width="100"><br><strong>Type</strong>: Honeycrisp<br><strong>Price</strong>: 3<br><strong>Freshness</strong>: Average</label>
 <input type="radio" autocomplete="off" id="cbc_q32" name="cbc_q3" value="option_2" class="btn-check">
-<label class="btn radiobtn btn-outline-primary" for="cbc_q32"><strong>Option 2</strong><br><img src="https://raw.githubusercontent.com/jhelvy/formr4conjoint/master/survey/images/pinkLady.jpg" width="100"><br><strong>Type</strong>: Pink Lady<br><strong>Price</strong>: 2.5<br><strong>Freshness</strong>: Excellent</label>
+<label class="btn radiobtn btn-outline-primary" for="cbc_q32"><strong>Option 2</strong><br><img src="/images/fuji.jpg" width="100"><br><strong>Type</strong>: Fuji<br><strong>Price</strong>: 2.5<br><strong>Freshness</strong>: Poor</label>
 <input type="radio" autocomplete="off" id="cbc_q33" name="cbc_q3" value="option_3" class="btn-check">
-<label class="btn radiobtn btn-outline-primary" for="cbc_q33"><strong>Option 3</strong><br><img src="https://raw.githubusercontent.com/jhelvy/formr4conjoint/master/survey/images/pinkLady.jpg" width="100"><br><strong>Type</strong>: Pink Lady<br><strong>Price</strong>: 1.5<br><strong>Freshness</strong>: Poor</label>
+<label class="btn radiobtn btn-outline-primary" for="cbc_q33"><strong>Option 3</strong><br><img src="/images/fuji.jpg" width="100"><br><strong>Type</strong>: Fuji<br><strong>Price</strong>: 3<br><strong>Freshness</strong>: Poor</label>
 </div>
 </div>
 </div>
@@ -485,11 +465,11 @@ Shiny.addCustomMessageHandler('shinyjs-refresh', function(params) { shinyjs.debu
 <div id="cbc_q4" class="radio-group-buttons">
 <div aria-labelledby="cbc_q4-label" class="btn-group btn-group-container-sw" data-toggle="buttons" role="group">
 <input type="radio" autocomplete="off" id="cbc_q41" name="cbc_q4" value="option_1" class="btn-check">
-<label class="btn radiobtn btn-outline-primary" for="cbc_q41"><strong>Option 1</strong><br><img src="https://raw.githubusercontent.com/jhelvy/formr4conjoint/master/survey/images/redDelicious.jpg" width="100"><br><strong>Type</strong>: Red Delicious<br><strong>Price</strong>: 4<br><strong>Freshness</strong>: Poor</label>
+<label class="btn radiobtn btn-outline-primary" for="cbc_q41"><strong>Option 1</strong><br><img src="/images/pinkLady.jpg" width="100"><br><strong>Type</strong>: Pink Lady<br><strong>Price</strong>: 3.5<br><strong>Freshness</strong>: Average</label>
 <input type="radio" autocomplete="off" id="cbc_q42" name="cbc_q4" value="option_2" class="btn-check">
-<label class="btn radiobtn btn-outline-primary" for="cbc_q42"><strong>Option 2</strong><br><img src="https://raw.githubusercontent.com/jhelvy/formr4conjoint/master/survey/images/redDelicious.jpg" width="100"><br><strong>Type</strong>: Red Delicious<br><strong>Price</strong>: 3.5<br><strong>Freshness</strong>: Excellent</label>
+<label class="btn radiobtn btn-outline-primary" for="cbc_q42"><strong>Option 2</strong><br><img src="/images/gala.jpg" width="100"><br><strong>Type</strong>: Gala<br><strong>Price</strong>: 4<br><strong>Freshness</strong>: Average</label>
 <input type="radio" autocomplete="off" id="cbc_q43" name="cbc_q4" value="option_3" class="btn-check">
-<label class="btn radiobtn btn-outline-primary" for="cbc_q43"><strong>Option 3</strong><br><img src="https://raw.githubusercontent.com/jhelvy/formr4conjoint/master/survey/images/honeycrisp.jpg" width="100"><br><strong>Type</strong>: Honeycrisp<br><strong>Price</strong>: 1<br><strong>Freshness</strong>: Average</label>
+<label class="btn radiobtn btn-outline-primary" for="cbc_q43"><strong>Option 3</strong><br><img src="/images/gala.jpg" width="100"><br><strong>Type</strong>: Gala<br><strong>Price</strong>: 4<br><strong>Freshness</strong>: Poor</label>
 </div>
 </div>
 </div>
@@ -517,11 +497,11 @@ Shiny.addCustomMessageHandler('shinyjs-refresh', function(params) { shinyjs.debu
 <div id="cbc_q5" class="radio-group-buttons">
 <div aria-labelledby="cbc_q5-label" class="btn-group btn-group-container-sw" data-toggle="buttons" role="group">
 <input type="radio" autocomplete="off" id="cbc_q51" name="cbc_q5" value="option_1" class="btn-check">
-<label class="btn radiobtn btn-outline-primary" for="cbc_q51"><strong>Option 1</strong><br><img src="https://raw.githubusercontent.com/jhelvy/formr4conjoint/master/survey/images/gala.jpg" width="100"><br><strong>Type</strong>: Gala<br><strong>Price</strong>: 4<br><strong>Freshness</strong>: Excellent</label>
+<label class="btn radiobtn btn-outline-primary" for="cbc_q51"><strong>Option 1</strong><br><img src="/images/pinkLady.jpg" width="100"><br><strong>Type</strong>: Pink Lady<br><strong>Price</strong>: 4<br><strong>Freshness</strong>: Average</label>
 <input type="radio" autocomplete="off" id="cbc_q52" name="cbc_q5" value="option_2" class="btn-check">
-<label class="btn radiobtn btn-outline-primary" for="cbc_q52"><strong>Option 2</strong><br><img src="https://raw.githubusercontent.com/jhelvy/formr4conjoint/master/survey/images/fuji.jpg" width="100"><br><strong>Type</strong>: Fuji<br><strong>Price</strong>: 2.5<br><strong>Freshness</strong>: Excellent</label>
+<label class="btn radiobtn btn-outline-primary" for="cbc_q52"><strong>Option 2</strong><br><img src="/images/fuji.jpg" width="100"><br><strong>Type</strong>: Fuji<br><strong>Price</strong>: 4<br><strong>Freshness</strong>: Poor</label>
 <input type="radio" autocomplete="off" id="cbc_q53" name="cbc_q5" value="option_3" class="btn-check">
-<label class="btn radiobtn btn-outline-primary" for="cbc_q53"><strong>Option 3</strong><br><img src="https://raw.githubusercontent.com/jhelvy/formr4conjoint/master/survey/images/redDelicious.jpg" width="100"><br><strong>Type</strong>: Red Delicious<br><strong>Price</strong>: 2.5<br><strong>Freshness</strong>: Average</label>
+<label class="btn radiobtn btn-outline-primary" for="cbc_q53"><strong>Option 3</strong><br><img src="/images/honeycrisp.jpg" width="100"><br><strong>Type</strong>: Honeycrisp<br><strong>Price</strong>: 3<br><strong>Freshness</strong>: Average</label>
 </div>
 </div>
 </div>
@@ -549,11 +529,11 @@ Shiny.addCustomMessageHandler('shinyjs-refresh', function(params) { shinyjs.debu
 <div id="cbc_q6" class="radio-group-buttons">
 <div aria-labelledby="cbc_q6-label" class="btn-group btn-group-container-sw" data-toggle="buttons" role="group">
 <input type="radio" autocomplete="off" id="cbc_q61" name="cbc_q6" value="option_1" class="btn-check">
-<label class="btn radiobtn btn-outline-primary" for="cbc_q61"><strong>Option 1</strong><br><img src="https://raw.githubusercontent.com/jhelvy/formr4conjoint/master/survey/images/pinkLady.jpg" width="100"><br><strong>Type</strong>: Pink Lady<br><strong>Price</strong>: 2<br><strong>Freshness</strong>: Poor</label>
+<label class="btn radiobtn btn-outline-primary" for="cbc_q61"><strong>Option 1</strong><br><img src="/images/pinkLady.jpg" width="100"><br><strong>Type</strong>: Pink Lady<br><strong>Price</strong>: 1<br><strong>Freshness</strong>: Excellent</label>
 <input type="radio" autocomplete="off" id="cbc_q62" name="cbc_q6" value="option_2" class="btn-check">
-<label class="btn radiobtn btn-outline-primary" for="cbc_q62"><strong>Option 2</strong><br><img src="https://raw.githubusercontent.com/jhelvy/formr4conjoint/master/survey/images/fuji.jpg" width="100"><br><strong>Type</strong>: Fuji<br><strong>Price</strong>: 1.5<br><strong>Freshness</strong>: Average</label>
+<label class="btn radiobtn btn-outline-primary" for="cbc_q62"><strong>Option 2</strong><br><img src="/images/pinkLady.jpg" width="100"><br><strong>Type</strong>: Pink Lady<br><strong>Price</strong>: 2.5<br><strong>Freshness</strong>: Poor</label>
 <input type="radio" autocomplete="off" id="cbc_q63" name="cbc_q6" value="option_3" class="btn-check">
-<label class="btn radiobtn btn-outline-primary" for="cbc_q63"><strong>Option 3</strong><br><img src="https://raw.githubusercontent.com/jhelvy/formr4conjoint/master/survey/images/fuji.jpg" width="100"><br><strong>Type</strong>: Fuji<br><strong>Price</strong>: 1<br><strong>Freshness</strong>: Excellent</label>
+<label class="btn radiobtn btn-outline-primary" for="cbc_q63"><strong>Option 3</strong><br><img src="/images/redDelicious.jpg" width="100"><br><strong>Type</strong>: Red Delicious<br><strong>Price</strong>: 3<br><strong>Freshness</strong>: Poor</label>
 </div>
 </div>
 </div>
@@ -574,84 +554,38 @@ Shiny.addCustomMessageHandler('shinyjs-refresh', function(params) { shinyjs.debu
 <p>Thank you for your feedback! The next section will ask some basic questions about apples.</p>
 <p>Please answer to the best of your knowledge.</p>
 <div class="cell">
-<div class="cell-output-display">
+<div class="cell-output-display no-overflow-x">
 <div id="container- apple_knowledge_1" data-question-id="apple_knowledge_1" data-required="true" class="question-container">
-<div id="apple_knowledge_1" style="width:100%;" class="form-group shiny-input-radiogroup shiny-input-container" role="radiogroup" aria-labelledby="apple_knowledge_1-label">
+<div class="form-group shiny-input-container" style="width:500px;">
 <label class="control-label" id="apple_knowledge_1-label" for="apple_knowledge_1"><p>Please select the type of this apple:</p>
-<p><img src="https://raw.githubusercontent.com/jhelvy/formr4conjoint/master/survey/images/fuji.jpg" width="100"> <span style="color: red; font-size: 1.5em; vertical-align: middle; position: relative; top: 0.1em;">*</span></p>
+<p><img src="/images/fuji.jpg" width="100"> <span style="color: red; font-size: 1.5em; vertical-align: middle; position: relative; top: 0.1em;">*</span></p>
 </label>
-<div class="shiny-options-group">
-<div class="radio">
-<label>
-<input type="radio" name="apple_knowledge_1" value="fuji">
-<span>Fuji</span>
-</label>
-</div>
-<div class="radio">
-<label>
-<input type="radio" name="apple_knowledge_1" value="gala">
-<span>Gala</span>
-</label>
-</div>
-<div class="radio">
-<label>
-<input type="radio" name="apple_knowledge_1" value="honeycrisp">
-<span>Honeycrisp</span>
-</label>
-</div>
-<div class="radio">
-<label>
-<input type="radio" name="apple_knowledge_1" value="pink_lady">
-<span>Pink Lady</span>
-</label>
-</div>
-<div class="radio">
-<label>
-<input type="radio" name="apple_knowledge_1" value="red_delicious">
-<span>Red Delicious</span>
-</label>
+<div>
+<select id="apple_knowledge_1" class="shiny-input-select"><option value="">Choose an option...</option>
+<option value="fuji">Fuji</option>
+<option value="gala">Gala</option>
+<option value="honeycrisp">Honeycrisp</option>
+<option value="pink_lady">Pink Lady</option>
+<option value="red_delicious">Red Delicious</option></select>
+<script type="application/json" data-for="apple_knowledge_1">{"plugins":["selectize-plugin-a11y"]}</script>
 </div>
 </div>
 </div>
 </div>
-</div>
-<div class="cell-output-display">
+<div class="cell-output-display no-overflow-x">
 <div id="container- apple_knowledge_2" data-question-id="apple_knowledge_2" data-required="true" class="question-container">
-<div id="apple_knowledge_2" style="width:100%;" class="form-group shiny-input-radiogroup shiny-input-container" role="radiogroup" aria-labelledby="apple_knowledge_2-label">
+<div class="form-group shiny-input-container" style="width:500px;">
 <label class="control-label" id="apple_knowledge_2-label" for="apple_knowledge_2"><p>Please select the type of this apple:</p>
-<p><img src="https://raw.githubusercontent.com/jhelvy/formr4conjoint/master/survey/images/gala.jpg" width="100"> <span style="color: red; font-size: 1.5em; vertical-align: middle; position: relative; top: 0.1em;">*</span></p>
+<p><img src="/images/gala.jpg" width="100"> <span style="color: red; font-size: 1.5em; vertical-align: middle; position: relative; top: 0.1em;">*</span></p>
 </label>
-<div class="shiny-options-group">
-<div class="radio">
-<label>
-<input type="radio" name="apple_knowledge_2" value="fuji">
-<span>Fuji</span>
-</label>
-</div>
-<div class="radio">
-<label>
-<input type="radio" name="apple_knowledge_2" value="gala">
-<span>Gala</span>
-</label>
-</div>
-<div class="radio">
-<label>
-<input type="radio" name="apple_knowledge_2" value="honeycrisp">
-<span>Honeycrisp</span>
-</label>
-</div>
-<div class="radio">
-<label>
-<input type="radio" name="apple_knowledge_2" value="pink_lady">
-<span>Pink Lady</span>
-</label>
-</div>
-<div class="radio">
-<label>
-<input type="radio" name="apple_knowledge_2" value="red_delicious">
-<span>Red Delicious</span>
-</label>
-</div>
+<div>
+<select id="apple_knowledge_2" class="shiny-input-select"><option value="">Choose an option...</option>
+<option value="fuji">Fuji</option>
+<option value="gala">Gala</option>
+<option value="honeycrisp">Honeycrisp</option>
+<option value="pink_lady">Pink Lady</option>
+<option value="red_delicious">Red Delicious</option></select>
+<script type="application/json" data-for="apple_knowledge_2">{"plugins":["selectize-plugin-a11y"]}</script>
 </div>
 </div>
 </div>
@@ -671,6 +605,7 @@ Shiny.addCustomMessageHandler('shinyjs-refresh', function(params) { shinyjs.debu
 <section id="nice-job" class="level2">
 <h2 class="anchored" data-anchor-id="nice-job">Nice job!</h2>
 <p>We’re almost done! We’d just like to ask just a few more questions about you which we will only use for analyzing our survey data.</p>
+<div style="width:500px; margin: 0 auto;">
 <div class="cell">
 <div class="cell-output-display no-overflow-x">
 <div id="container- year_of_birth" data-question-id="year_of_birth" data-required="true" class="question-container">
@@ -797,7 +732,7 @@ Shiny.addCustomMessageHandler('shinyjs-refresh', function(params) { shinyjs.debu
 <option value="white">White (Not of Hispanic or Latino origin)</option>
 <option value="black">African American or Black</option>
 <option value="asian">Asian</option>
-<option value="hispanic">Hispanic or Latino </option>
+<option value="hispanic">Hispanic or Latino</option>
 <option value="native_american">American Indian or Alaska Native</option>
 <option value="pacific_islander">Native Hawaiian or Other Pacific Islander</option>
 <option value="prefer_not_to_say">Prefer not to say</option></select>
@@ -863,6 +798,7 @@ Shiny.addCustomMessageHandler('shinyjs-refresh', function(params) { shinyjs.debu
 </div>
 </div>
 </div>
+</div>
 <p><br></p>
 <div class="cell">
 <div class="cell-output-display">
@@ -876,7 +812,7 @@ Shiny.addCustomMessageHandler('shinyjs-refresh', function(params) { shinyjs.debu
 <section id="end-page" class="level1">
 <h1>End Page</h1>
 <p>The survey is finished. Thank you for your feedback!</p>
-<p>Your completion code is: <strong>221798</strong>.</p>
+<p>Your completion code is: <strong>891734</strong>.</p>
 <p>You may close the window now.</p>
 </section>
 </div>
@@ -895,36 +831,37 @@ Shiny.addCustomMessageHandler('shinyjs-refresh', function(params) { shinyjs.debu
 </div>
 <p>
 <script type="application/shiny-prerendered" data-context="server-start">
-# Run this in your Terminal to install the Quarto extension:
-# quarto install extension jhelvy/surveydown-ext
-
-# Run this in your Console to install the R package:
+# To install the R package, run this in your R console:
 # remotes::install_github("jhelvy/surveydown", force = TRUE)
 
-devtools::load_all("../surveydown")
+# To install the Quarto extension, run this in your R console:
+# surveydown::sd_update_extension()
 
-# Load the package from library:
-# library(surveydown)
-
-# Load other necessary packages:
+# Load packages
+library(surveydown)
 library(tidyverse)
 library(glue)
 
-# This is essential to the survey:
+# Run initial setup function (essential - do not delete)
 sd_setup()
 </script>
  
 <script type="application/shiny-prerendered" data-context="server">
-#This is what the user has to input
-db <- sd_database(
-  host       = "aws-0-us-east-1.pooler.supabase.com",
-  db_name    = "postgres",
-  port       = "6543",
-  user       = "postgres.hwumdvjnymbrgeemvrhq",
-  table_name = "apple",
-  password   = Sys.getenv("SUPABASE_PASSWORD"),
-  gssencmode = "disable" # Set to "disable" if there is connection error
-)
+# To set the password, run usethis::edit_r_environ()
+# Then, type SUPABASE_PASSWORD=your_password
+# No quotation needed
+# Finally, restart R session by Session -> Restart R
+# Shortcut for restarting R: cmd+shift+0 (Mac), ctrl+shift+F10 (Win)
+
+# db <- sd_database(
+#   host       = "aws-0-us-east-1.pooler.supabase.com",
+#   db_name    = "postgres",
+#   port       = "6543",
+#   user       = "postgres.hwumdvjnymbrgeemvrhq",
+#   table_name = "apple",
+#   password   = Sys.getenv("SUPABASE_PASSWORD")
+# )
+db <- sd_database()
 
 config <- sd_config(
   skip_if = tibble::tribble(
@@ -937,7 +874,8 @@ config <- sd_config(
     ~question_id,         ~question_value, ~target,
     "like_fruit",         "yes",           "fav_fruit",
     "like_fruit",         "kind_of",       "fav_fruit"
-  )
+  ), 
+  start_page = "demographics"
 )
 
 sd_server(
@@ -977,12 +915,12 @@ ojs_define <- function(..., .session = shiny::getDefaultReactiveDomain()) {
 </p>
 <!--html_preserve-->
 <script type="application/shiny-prerendered" data-context="dependencies">
-{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["sw-buttons-group"]},{"type":"character","attributes":{},"value":["0.8.6"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["packer"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["buttons-group.js"]},{"type":"NULL"},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shinyWidgets"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["0.8.6"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["sw-buttons-group"]},{"type":"character","attributes":{},"value":["0.8.6"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["packer"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["buttons-group.js"]},{"type":"NULL"},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shinyWidgets"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["0.8.6"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["sw-buttons-group"]},{"type":"character","attributes":{},"value":["0.8.6"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["packer"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["buttons-group.js"]},{"type":"NULL"},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shinyWidgets"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["0.8.6"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["sw-buttons-group"]},{"type":"character","attributes":{},"value":["0.8.6"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["packer"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["buttons-group.js"]},{"type":"NULL"},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shinyWidgets"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["0.8.6"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["sw-buttons-group"]},{"type":"character","attributes":{},"value":["0.8.6"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["packer"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["buttons-group.js"]},{"type":"NULL"},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shinyWidgets"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["0.8.6"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["sw-buttons-group"]},{"type":"character","attributes":{},"value":["0.8.6"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["packer"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["buttons-group.js"]},{"type":"NULL"},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shinyWidgets"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["0.8.6"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["sw-buttons-group"]},{"type":"character","attributes":{},"value":["0.8.6"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["packer"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["buttons-group.js"]},{"type":"NULL"},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shinyWidgets"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["0.8.6"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["selectize"]},{"type":"character","attributes":{},"value":["0.15.2"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["www/shared/selectize"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["js/selectize.min.js","accessibility/js/selectize-plugin-a11y.min.js"]},{"type":"character","attributes":{},"value":["css/selectize.bootstrap3.css"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shiny"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["1.9.1"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["selectize"]},{"type":"character","attributes":{},"value":["0.15.2"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["www/shared/selectize"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["js/selectize.min.js","accessibility/js/selectize-plugin-a11y.min.js"]},{"type":"character","attributes":{},"value":["css/selectize.bootstrap3.css"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shiny"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["1.9.1"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["selectize"]},{"type":"character","attributes":{},"value":["0.15.2"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["www/shared/selectize"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["js/selectize.min.js","accessibility/js/selectize-plugin-a11y.min.js"]},{"type":"character","attributes":{},"value":["css/selectize.bootstrap3.css"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shiny"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["1.9.1"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["selectize"]},{"type":"character","attributes":{},"value":["0.15.2"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["www/shared/selectize"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["js/selectize.min.js","accessibility/js/selectize-plugin-a11y.min.js"]},{"type":"character","attributes":{},"value":["css/selectize.bootstrap3.css"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shiny"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["1.9.1"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["selectize"]},{"type":"character","attributes":{},"value":["0.15.2"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["www/shared/selectize"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["js/selectize.min.js","accessibility/js/selectize-plugin-a11y.min.js"]},{"type":"character","attributes":{},"value":["css/selectize.bootstrap3.css"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shiny"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["1.9.1"]}]}]}
+{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["sw-buttons-group"]},{"type":"character","attributes":{},"value":["0.8.6"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["packer"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["buttons-group.js"]},{"type":"NULL"},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shinyWidgets"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["0.8.6"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["sw-buttons-group"]},{"type":"character","attributes":{},"value":["0.8.6"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["packer"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["buttons-group.js"]},{"type":"NULL"},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shinyWidgets"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["0.8.6"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["sw-buttons-group"]},{"type":"character","attributes":{},"value":["0.8.6"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["packer"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["buttons-group.js"]},{"type":"NULL"},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shinyWidgets"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["0.8.6"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["sw-buttons-group"]},{"type":"character","attributes":{},"value":["0.8.6"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["packer"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["buttons-group.js"]},{"type":"NULL"},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shinyWidgets"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["0.8.6"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["sw-buttons-group"]},{"type":"character","attributes":{},"value":["0.8.6"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["packer"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["buttons-group.js"]},{"type":"NULL"},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shinyWidgets"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["0.8.6"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["sw-buttons-group"]},{"type":"character","attributes":{},"value":["0.8.6"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["packer"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["buttons-group.js"]},{"type":"NULL"},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shinyWidgets"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["0.8.6"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["sw-buttons-group"]},{"type":"character","attributes":{},"value":["0.8.6"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["packer"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["buttons-group.js"]},{"type":"NULL"},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shinyWidgets"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["0.8.6"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["selectize"]},{"type":"character","attributes":{},"value":["0.15.2"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["www/shared/selectize"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["js/selectize.min.js","accessibility/js/selectize-plugin-a11y.min.js"]},{"type":"character","attributes":{},"value":["css/selectize.bootstrap3.css"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shiny"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["1.9.1"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["selectize"]},{"type":"character","attributes":{},"value":["0.15.2"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["www/shared/selectize"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["js/selectize.min.js","accessibility/js/selectize-plugin-a11y.min.js"]},{"type":"character","attributes":{},"value":["css/selectize.bootstrap3.css"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shiny"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["1.9.1"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["selectize"]},{"type":"character","attributes":{},"value":["0.15.2"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["www/shared/selectize"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["js/selectize.min.js","accessibility/js/selectize-plugin-a11y.min.js"]},{"type":"character","attributes":{},"value":["css/selectize.bootstrap3.css"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shiny"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["1.9.1"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["selectize"]},{"type":"character","attributes":{},"value":["0.15.2"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["www/shared/selectize"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["js/selectize.min.js","accessibility/js/selectize-plugin-a11y.min.js"]},{"type":"character","attributes":{},"value":["css/selectize.bootstrap3.css"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shiny"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["1.9.1"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["selectize"]},{"type":"character","attributes":{},"value":["0.15.2"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["www/shared/selectize"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["js/selectize.min.js","accessibility/js/selectize-plugin-a11y.min.js"]},{"type":"character","attributes":{},"value":["css/selectize.bootstrap3.css"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shiny"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["1.9.1"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["selectize"]},{"type":"character","attributes":{},"value":["0.15.2"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["www/shared/selectize"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["js/selectize.min.js","accessibility/js/selectize-plugin-a11y.min.js"]},{"type":"character","attributes":{},"value":["css/selectize.bootstrap3.css"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shiny"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["1.9.1"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["selectize"]},{"type":"character","attributes":{},"value":["0.15.2"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["www/shared/selectize"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["js/selectize.min.js","accessibility/js/selectize-plugin-a11y.min.js"]},{"type":"character","attributes":{},"value":["css/selectize.bootstrap3.css"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shiny"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["1.9.1"]}]}]}
 </script>
 <!--/html_preserve-->
 <!--html_preserve-->
 <script type="application/shiny-prerendered" data-context="execution_dependencies">
-{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["packages"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["packages","version"]},"class":{"type":"character","attributes":{},"value":["data.frame"]},"row.names":{"type":"integer","attributes":{},"value":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97]}},"value":[{"type":"character","attributes":{},"value":["base","bit","bit64","blob","brio","bslib","cachem","cli","colorspace","commonmark","compiler","crayon","curl","datasets","DBI","desc","devtools","digest","dplyr","ellipsis","evaluate","fansi","fastmap","forcats","fs","generics","ggplot2","glue","graphics","grDevices","grid","gtable","hms","htmltools","htmlwidgets","httpuv","httr","jquerylib","jsonlite","knitr","later","lifecycle","lubridate","magrittr","markdown","memoise","methods","mime","miniUI","munsell","parallel","pillar","pkgbuild","pkgconfig","pkgload","profvis","promises","purrr","R6","Rcpp","readr","remotes","rlang","rmarkdown","RPostgres","rprojroot","rstudioapi","rvest","sass","scales","sessioninfo","shiny","shinyjs","shinyWidgets","stats","stringi","stringr","surveydown","testthat","tibble","tidyr","tidyselect","tidyverse","timechange","tools","tzdb","urlchecker","usethis","utf8","utils","vctrs","vroom","withr","xfun","xml2","xtable","yaml"]},{"type":"character","attributes":{},"value":["4.3.0","4.0.5","4.0.5","1.2.4","1.1.5","0.8.0","1.1.0","3.6.3","2.1-0","1.9.1","4.3.0","1.5.3","5.2.1","4.3.0","1.2.3","1.4.3","2.4.5","0.6.36","1.1.4","0.3.2","0.24.0","1.0.6","1.2.0","1.0.0","1.6.4","0.1.3","3.5.0","1.7.0","4.3.0","4.3.0","4.3.0","0.3.4","1.1.3","0.5.8.1","1.6.4","1.6.15","1.4.7","0.1.4","1.8.8","1.48","1.3.2","1.0.4","1.9.3","2.0.3","1.13","2.0.1","4.3.0","0.12","0.1.1.1","0.5.0","4.3.0","1.9.0","1.4.4","2.0.3","1.4.0","0.3.8","1.3.0","1.0.2","2.5.1","1.0.13","2.1.5","2.4.2.1","1.1.4","2.27","1.4.7","2.0.4","0.16.0","1.0.4","0.4.9.9000","1.3.0","1.2.2","1.9.1","2.1.0","0.8.6","4.3.0","1.8.4","1.5.1","0.0.5","3.2.1.1","3.2.1","1.3.1","1.2.1","2.0.0","0.3.0","4.3.0","0.4.0","1.0.1","3.0.0","1.2.4","4.3.0","0.6.5","1.6.5","3.0.1","0.46","1.3.6","1.8-4","2.3.10"]}]}]}
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["packages"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["packages","version"]},"class":{"type":"character","attributes":{},"value":["data.frame"]},"row.names":{"type":"integer","attributes":{},"value":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74]}},"value":[{"type":"character","attributes":{},"value":["base","bit","bit64","bslib","cachem","cli","colorspace","commonmark","compiler","crayon","datasets","digest","dplyr","evaluate","fansi","fastmap","forcats","generics","ggplot2","glue","graphics","grDevices","grid","gtable","hms","htmltools","htmlwidgets","httpuv","jquerylib","jsonlite","knitr","later","lifecycle","lubridate","magrittr","markdown","memoise","methods","mime","munsell","parallel","pillar","pkgconfig","promises","purrr","R6","Rcpp","readr","rlang","rmarkdown","sass","scales","shiny","shinyjs","shinyWidgets","stats","stringi","stringr","surveydown","tibble","tidyr","tidyselect","tidyverse","timechange","tools","tzdb","utf8","utils","vctrs","vroom","withr","xfun","xtable","yaml"]},{"type":"character","attributes":{},"value":["4.4.1","4.0.5","4.0.5","0.8.0","1.1.0","3.6.3","2.1-1","1.9.1","4.4.1","1.5.3","4.4.1","0.6.36","1.1.4","0.24.0","1.0.6","1.2.0","1.0.0","0.1.3","3.5.1","1.7.0","4.4.1","4.4.1","4.4.1","0.3.5","1.1.3","0.5.8.1","1.6.4","1.6.15","0.1.4","1.8.8","1.48","1.3.2","1.0.4","1.9.3","2.0.3","1.13","2.0.1","4.4.1","0.12","0.5.1","4.4.1","1.9.0","2.0.3","1.3.0","1.0.2","2.5.1","1.0.13","2.1.5","1.1.4","2.27","0.4.9","1.3.0","1.9.1","2.1.0","0.8.6","4.4.1","1.8.4","1.5.1","0.0.5","3.2.1","1.3.1","1.2.1","2.0.0","0.3.0","4.4.1","0.4.0","1.2.4","4.4.1","0.6.5","1.6.5","3.0.1","0.46","1.8-4","2.3.10"]}]}]}
 </script>
 <!--/html_preserve-->
 
