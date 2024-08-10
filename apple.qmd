@@ -168,7 +168,7 @@ We will show five different types of apples:
 
 Fuji | Gala | Honeycrisp | Pink Lady | Red Delicious
 -----|------|------------|-----------|--------------
-<img src="/images/fuji.jpg" width=100> | <img src="/images/gala.jpg" width=100> | <img src="/images/honeycrisp.jpg" width=100> | <img src="images/pinkLady.jpg" width=100> | <img src="/images/redDelicious.jpg" width=100>
+<img src="images/fuji.jpg" width=100> | <img src="images/gala.jpg" width=100> | <img src="images/honeycrisp.jpg" width=100> | <img src="images/pinkLady.jpg" width=100> | <img src="images/redDelicious.jpg" width=100>
 
 </div>
 
@@ -194,21 +194,21 @@ apple_buttons_option <- c("option_1", "option_2", "option_3")
 
 names(apple_buttons_option)[1] <- "
   **Option 1**<br>
-  <img src='/images/fuji.jpg' width=100><br>
+  <img src='images/fuji.jpg' width=100><br>
   **Type**: Fuji<br>
   **Price**: $ 2 / lb<br>
   **Freshness**: Average
 "
 names(apple_buttons_option)[2] <- "
   **Option 2**<br>
-  <img src='/images/pinkLady.jpg' width=100><br>
+  <img src='images/pinkLady.jpg' width=100><br>
   **Type**: Pink Lady<br>
   **Price**: $ 1.5 / lb<br>
   **Freshness**: Excellent
 "
 names(apple_buttons_option)[3] <- "
   **Option 3**<br>
-  <img src='/images/honeycrisp.jpg' width=100><br>
+  <img src='images/honeycrisp.jpg' width=100><br>
   **Type**: Honeycrisp<br>
   **Price**: $ 2 / lb<br>
   **Freshness**: Poor
@@ -247,7 +247,7 @@ survey <- read_csv("choice_questions.csv")
 respondentID <- sample(survey$respID, 1)
 df <- survey %>% 
     filter(respID == respondentID) %>% 
-    mutate(image = paste0("/images/", image))
+    mutate(image = paste0("images/", image))
 ```
 
 ```{r}
@@ -633,7 +633,7 @@ Please answer to the best of your knowledge.
 ```{r}
 label <- 'Please select the type of this apple:
 
-  <img src="/images/fuji.jpg" width=100>'
+  <img src="images/fuji.jpg" width=100>'
 
 sd_question(
   type  = 'select',
@@ -652,7 +652,7 @@ sd_question(
 
 label <- 'Please select the type of this apple:
 
-<img src="/images/gala.jpg" width=100>'
+<img src="images/gala.jpg" width=100>'
 
 sd_question(
   type  = 'select',
@@ -855,7 +855,6 @@ db <- sd_database(
   password   = Sys.getenv("SUPABASE_PASSWORD"),
   gssencmode = "disable"
 )
-# db <- sd_database()
 
 config <- sd_config(
   skip_if = tibble::tribble(

@@ -1,0 +1,10 @@
+name: apple
+title:
+username: pingfan
+account: pingfan
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 12432898
+bundleId: 8967413
+url: https://pingfan.shinyapps.io/apple/
+version: 1
