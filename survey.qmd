@@ -22,8 +22,8 @@ filters: [surveydown]
 # surveydown::sd_check_versions()
 
 # Load the surveydown package
-library(surveydown)
-# devtools::load_all("../surveydown")
+# library(surveydown)
+devtools::load_all("../surveydown")
 
 # Load other packages
 library(tidyverse)
@@ -540,6 +540,7 @@ config <- sd_config(
 ##########################
 survey <- read_csv("choice_questions.csv")
 respondentID <- sample(survey$respID, 1)
+
 sd_store_value(respondentID, "respID")
 
 df <- survey %>%
@@ -634,7 +635,7 @@ db <- sd_database(
   db_name    = "postgres",
   port       = "6543",
   user       = "postgres.hwumdvjnymbrgeemvrhq",
-  table_name = "apple",
+  table_name = "apple_conjoint",
   gssencmode = "disable"
 )
 
