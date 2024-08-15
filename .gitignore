@@ -8,3 +8,5 @@ build.R
 foo.R
 data.csv
 .Renviron
+survey_files
+data.csv
