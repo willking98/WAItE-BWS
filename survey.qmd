@@ -22,8 +22,7 @@ filters: [surveydown]
 # surveydown::sd_check_versions()
 
 # Load the surveydown package
-# library(surveydown)
-devtools::load_all("../surveydown")
+library(surveydown)
 
 # Load other packages
 library(tidyverse)
@@ -34,6 +33,7 @@ sd_setup()
 ```
 
 ::: {#welcome .sd-page}
+
 # Welcome to our survey!
 
 Thank you for participating in this survey, which is part of a research effort by The George Washington University. For this survey, we will ask you about your preferences for different types of apples.
@@ -41,9 +41,11 @@ Thank you for participating in this survey, which is part of a research effort b
 ```{r}
 sd_next(next_page = 'consent')
 ```
+
 :::
 
 ::: {#consent .sd-page}
+
 # Consent
 
 This survey is being conducted by students at The George Washing University. We will not be collecting any identifying data, such as your name or address. The whole survey will take approximately 10 to 15 minutes to complete. Your participation is voluntary and you may stop the survey at any time.
@@ -80,6 +82,7 @@ sd_next(next_page = 'favorite_fruit')
 :::
 
 ::: {#favorite_fruit .sd-page}
+
 # Favorite Fruit
 
 ```{r}
@@ -106,9 +109,11 @@ sd_question(
 ```{r}
 sd_next(next_page = 'screening')
 ```
+
 :::
 
 ::: {#screening .sd-page}
+
 # Screening Questions
 
 For this example, I'm using the response here to screen out respondents - I'm only interested in people who choose **"Red"**, so if you choose "Blue" you'll be screened out.
@@ -132,9 +137,11 @@ sd_question(
 ```{r}
 sd_next(next_page = 'educational')
 ```
+
 :::
 
 ::: {#educational .sd-page}
+
 # Educational Page
 
 Great work! 
@@ -170,9 +177,11 @@ Fuji | Gala | Honeycrisp | Pink Lady | Red Delicious
 ```{r}
 sd_next(next_page = 'cbc_practice')
 ```
+
 :::
 
 ::: {#cbc_practice .sd-page}
+
 # Choice-based Conjoint (cbc) Practice
 
 We'll now begin the choice tasks. On the next few pages we will show you three options of apples and we'll ask you to choose the one you most prefer.
@@ -220,9 +229,11 @@ sd_question(
 ```{r}
 sd_next(next_page = 'cbc_intro')
 ```
+
 :::
 
 ::: {#cbc_intro .sd-page}
+
 # Conjoint Question Intro
 
 Great work!
@@ -232,13 +243,15 @@ We will now show you 6 sets of choice questions starting on the next page.
 ```{r}
 sd_next(next_page = 'cbc_q1')
 ```
+
 :::
 
 ::: {#cbc_q1 .sd-page}
+
 # Conjoint Question 1
 
 ```{r}
-sd_reactive_output('cbc_q1')
+sd_display_question('cbc_q1')
 ```
 
 <br>
@@ -246,13 +259,15 @@ sd_reactive_output('cbc_q1')
 ```{r}
 sd_next(next_page = 'cbc_q2')
 ```
+
 :::
 
 ::: {#cbc_q2 .sd-page}
+
 # Conjoint Question 2
 
 ```{r}
-sd_reactive_output('cbc_q2')
+sd_display_question('cbc_q2')
 ```
 
 <br>
@@ -260,13 +275,15 @@ sd_reactive_output('cbc_q2')
 ```{r}
 sd_next(next_page = 'cbc_q3')
 ```
+
 :::
 
 ::: {#cbc_q3 .sd-page}
+
 # Conjoint Question 3
 
 ```{r}
-sd_reactive_output('cbc_q3')
+sd_display_question('cbc_q3')
 ```
 
 <br>
@@ -274,13 +291,15 @@ sd_reactive_output('cbc_q3')
 ```{r}
 sd_next(next_page = 'cbc_q4')
 ```
+
 :::
 
 ::: {#cbc_q4 .sd-page}
+
 # Conjoint Question 4
 
 ```{r}
-sd_reactive_output('cbc_q4')
+sd_display_question('cbc_q4')
 ```
 
 <br>
@@ -288,13 +307,15 @@ sd_reactive_output('cbc_q4')
 ```{r}
 sd_next(next_page = 'cbc_q5')
 ```
+
 :::
 
 ::: {#cbc_q5 .sd-page}
+
 # Conjoint Question 5
 
 ```{r}
-sd_reactive_output('cbc_q5')
+sd_display_question('cbc_q5')
 ```
 
 <br>
@@ -302,13 +323,15 @@ sd_reactive_output('cbc_q5')
 ```{r}
 sd_next(next_page = 'cbc_q6')
 ```
+
 :::
 
 ::: {#cbc_q6 .sd-page}
+
 # Conjoint Question 6
 
 ```{r}
-sd_reactive_output('cbc_q6')
+sd_display_question('cbc_q6')
 ```
 
 <br>
@@ -316,9 +339,11 @@ sd_reactive_output('cbc_q6')
 ```{r}
 sd_next(next_page = 'apple_knowledge')
 ```
+
 :::
 
 ::: {#apple_knowledge .sd-page}
+
 # Apple Knowledge
 
 Thank you for your feedback! The next section will ask some basic questions about apples. 
@@ -381,10 +406,9 @@ We're almost done! We'd just like to ask just a few more questions about you whi
 ```{r}
 # Construct the list of years
 
-years <- 2003:1920 %>%
-  as.character() %>%
-  { setNames(., .) } %>%
-  c("Prefer not to say" = "prefer_not_say", .)
+years <- as.character(2003:1920)
+names(years) <- years
+years <- c("Prefer not to say" = "prefer_not_say", years)
 
 sd_question(
   type   = 'select',
@@ -484,9 +508,11 @@ sd_question(
 ```{r}
 sd_next(next_page = 'end_normal')
 ```
+
 :::
 
 ::: {#end_normal .sd-page}
+
 # End Page
 
 ```{r}
@@ -520,6 +546,7 @@ The survey is now finished. You may close the window.
 ##################
 # Survey Configs #
 ##################
+
 config <- sd_config(
   skip_if = tibble::tribble(
     ~question_id,         ~question_value, ~target,
@@ -535,9 +562,16 @@ config <- sd_config(
   all_questions_required = TRUE
 )
 
+sd_question_reactive(
+  type  = "text",
+  id    = "respondent_name",
+  label = "What is your name?"
+)
+
 ##########################
 # Conjoint Question Data #
 ##########################
+
 survey <- read_csv("choice_questions.csv")
 respondentID <- sample(survey$respID, 1)
 
@@ -636,7 +670,8 @@ db <- sd_database(
   port       = "6543",
   user       = "postgres.hwumdvjnymbrgeemvrhq",
   table_name = "apple_conjoint",
-  gssencmode = "disable"
+  gssencmode = "disable", 
+  pause = TRUE
 )
 
 sd_server(
