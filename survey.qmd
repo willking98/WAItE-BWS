@@ -575,6 +575,7 @@ sd_question_reactive(
 survey <- read_csv("choice_questions.csv")
 respondentID <- sample(survey$respID, 1)
 
+# Store custom value
 sd_store_value(respondentID, "respID")
 
 df <- survey %>%
@@ -669,9 +670,8 @@ db <- sd_database(
   db_name    = "postgres",
   port       = "6543",
   user       = "postgres.hwumdvjnymbrgeemvrhq",
-  table_name = "apple_conjoint",
-  gssencmode = "disable", 
-  pause = TRUE
+  table_name = "conjoint",
+  gssencmode = "disable"
 )
 
 sd_server(
