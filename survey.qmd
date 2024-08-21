@@ -562,10 +562,11 @@ config <- sd_config(
   all_questions_required = TRUE
 )
 
-sd_question_reactive(
+sd_question(
   type  = "text",
   id    = "respondent_name",
-  label = "What is your name?"
+  label = "What is your name?",
+  reactive = TRUE
 )
 
 ##########################
@@ -619,46 +620,52 @@ cbc4_options <- make_cbc_options(df %>% filter(qID == 4))
 cbc5_options <- make_cbc_options(df %>% filter(qID == 5))
 cbc6_options <- make_cbc_options(df %>% filter(qID == 6))
 
-sd_question_reactive(
+sd_question(
   type   = 'mc_buttons',
   id     = 'cbc_q1',
   label  = "(1 of 6) If these were your only options, which would you choose?",
-  option = cbc1_options
+  option = cbc1_options,
+  reactive = TRUE
 )
 
-sd_question_reactive(
+sd_question(
   type   = 'mc_buttons',
   id     = 'cbc_q2',
   label  = "(2 of 6) If these were your only options, which would you choose?",
-  option = cbc2_options
+  option = cbc2_options,
+  reactive = TRUE
 )
 
-sd_question_reactive(
+sd_question(
   type   = 'mc_buttons',
   id     = 'cbc_q3',
   label  = "(3 of 6) If these were your only options, which would you choose?",
-  option = cbc3_options
+  option = cbc3_options,
+  reactive = TRUE
 )
 
-sd_question_reactive(
+sd_question(
   type   = 'mc_buttons',
   id     = 'cbc_q4',
   label  = "(4 of 6) If these were your only options, which would you choose?",
-  option = cbc4_options
+  option = cbc4_options,
+  reactive = TRUE
 )
 
-sd_question_reactive(
+sd_question(
   type   = 'mc_buttons',
   id     = 'cbc_q5',
   label  = "(5 of 6) If these were your only options, which would you choose?",
-  option = cbc5_options
+  option = cbc5_options,
+  reactive = TRUE
 )
 
-sd_question_reactive(
+sd_question(
   type   = 'mc_buttons',
   id     = 'cbc_q6',
   label  = "(6 of 6) If these were your only options, which would you choose?",
-  option = cbc6_options
+  option = cbc6_options,
+  reactive = TRUE
 )
 
 ################

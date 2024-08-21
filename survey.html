@@ -34,6 +34,10 @@ ul.task-list li input[type="checkbox"] {
 <link href="survey_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="survey_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <link href="survey_files/libs/quarto-contrib/surveydowncss/surveydown.css" rel="stylesheet">
+<script src="survey_files/libs/quarto-contrib/pagenavjs/page_nav.js"></script>
+<script src="survey_files/libs/quarto-contrib/keepalivejs/keep_alive.js"></script>
+<script src="survey_files/libs/quarto-contrib/updateprogressjs/update_progress.js"></script>
+<script src="survey_files/libs/quarto-contrib/requiredquestionsjs/required_questions.js"></script>
 
 
 </head>
@@ -726,7 +730,7 @@ Shiny.addCustomMessageHandler('shinyjs-refresh', function(params) { shinyjs.debu
 <section id="end-page" class="level1">
 <h1>End Page</h1>
 <p>The survey is finished. Thank you for your feedback!</p>
-<p>Your completion code is: <strong>101024</strong>.</p>
+<p>Your completion code is: <strong>151796</strong>.</p>
 <p>You may close the window now.</p>
 </section>
 </div>
@@ -788,10 +792,11 @@ config <- sd_config(
   all_questions_required = TRUE
 )
 
-sd_question_reactive(
+sd_question(
   type  = "text",
   id    = "respondent_name",
-  label = "What is your name?"
+  label = "What is your name?",
+  reactive = TRUE
 )
 
 ##########################
@@ -845,46 +850,52 @@ cbc4_options <- make_cbc_options(df %>% filter(qID == 4))
 cbc5_options <- make_cbc_options(df %>% filter(qID == 5))
 cbc6_options <- make_cbc_options(df %>% filter(qID == 6))
 
-sd_question_reactive(
+sd_question(
   type   = 'mc_buttons',
   id     = 'cbc_q1',
   label  = "(1 of 6) If these were your only options, which would you choose?",
-  option = cbc1_options
+  option = cbc1_options,
+  reactive = TRUE
 )
 
-sd_question_reactive(
+sd_question(
   type   = 'mc_buttons',
   id     = 'cbc_q2',
   label  = "(2 of 6) If these were your only options, which would you choose?",
-  option = cbc2_options
+  option = cbc2_options,
+  reactive = TRUE
 )
 
-sd_question_reactive(
+sd_question(
   type   = 'mc_buttons',
   id     = 'cbc_q3',
   label  = "(3 of 6) If these were your only options, which would you choose?",
-  option = cbc3_options
+  option = cbc3_options,
+  reactive = TRUE
 )
 
-sd_question_reactive(
+sd_question(
   type   = 'mc_buttons',
   id     = 'cbc_q4',
   label  = "(4 of 6) If these were your only options, which would you choose?",
-  option = cbc4_options
+  option = cbc4_options,
+  reactive = TRUE
 )
 
-sd_question_reactive(
+sd_question(
   type   = 'mc_buttons',
   id     = 'cbc_q5',
   label  = "(5 of 6) If these were your only options, which would you choose?",
-  option = cbc5_options
+  option = cbc5_options,
+  reactive = TRUE
 )
 
-sd_question_reactive(
+sd_question(
   type   = 'mc_buttons',
   id     = 'cbc_q6',
   label  = "(6 of 6) If these were your only options, which would you choose?",
-  option = cbc6_options
+  option = cbc6_options,
+  reactive = TRUE
 )
 
 ################
@@ -943,7 +954,7 @@ ojs_define <- function(..., .session = shiny::getDefaultReactiveDomain()) {
 <!--/html_preserve-->
 <!--html_preserve-->
 <script type="application/shiny-prerendered" data-context="execution_dependencies">
-{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["packages"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["packages","version"]},"class":{"type":"character","attributes":{},"value":["data.frame"]},"row.names":{"type":"integer","attributes":{},"value":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74]}},"value":[{"type":"character","attributes":{},"value":["base","bslib","cachem","cli","colorspace","commonmark","compiler","datasets","DBI","digest","dplyr","DT","evaluate","fansi","fastmap","forcats","fs","generics","ggplot2","glue","graphics","grDevices","grid","gtable","hms","htmltools","htmlwidgets","httpuv","jquerylib","jsonlite","knitr","later","lifecycle","lubridate","magrittr","markdown","memoise","methods","mime","munsell","pillar","pkgconfig","promises","purrr","R6","Rcpp","readr","rlang","rmarkdown","rstudioapi","sass","scales","shiny","shinyjs","shinyWidgets","stats","stringi","stringr","surveydown","tibble","tidyr","tidyselect","tidyverse","timechange","tools","tzdb","usethis","utf8","utils","vctrs","withr","xfun","xtable","yaml"]},{"type":"character","attributes":{},"value":["4.3.0","0.8.0","1.1.0","3.6.3","2.1-0","1.9.1","4.3.0","4.3.0","1.2.3","0.6.36","1.1.4","0.33","0.24.0","1.0.6","1.2.0","1.0.0","1.6.4","0.1.3","3.5.0","1.7.0","4.3.0","4.3.0","4.3.0","0.3.4","1.1.3","0.5.8.1","1.6.4","1.6.15","0.1.4","1.8.8","1.48","1.3.2","1.0.4","1.9.3","2.0.3","1.13","2.0.1","4.3.0","0.12","0.5.0","1.9.0","2.0.3","1.3.0","1.0.2","2.5.1","1.0.13","2.1.5","1.1.4","2.28","0.16.0","0.4.9.9000","1.3.0","1.9.1","2.1.0","0.8.6","4.3.0","1.8.4","1.5.1","0.1.0","3.2.1","1.3.1","1.2.1","2.0.0","0.3.0","4.3.0","0.4.0","3.0.0","1.2.4","4.3.0","0.6.5","3.0.1","0.47","1.8-4","2.3.10"]}]}]}
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["packages"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["packages","version"]},"class":{"type":"character","attributes":{},"value":["data.frame"]},"row.names":{"type":"integer","attributes":{},"value":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70]}},"value":[{"type":"character","attributes":{},"value":["base","bslib","cachem","cli","colorspace","commonmark","compiler","datasets","digest","dplyr","evaluate","fansi","fastmap","forcats","generics","ggplot2","glue","graphics","grDevices","grid","gtable","hms","htmltools","htmlwidgets","httpuv","jquerylib","jsonlite","knitr","later","lifecycle","lubridate","magrittr","markdown","memoise","methods","mime","munsell","pillar","pkgconfig","promises","purrr","R6","Rcpp","readr","rlang","rmarkdown","rstudioapi","sass","scales","shiny","shinyjs","shinyWidgets","stats","stringi","stringr","surveydown","tibble","tidyr","tidyselect","tidyverse","timechange","tools","tzdb","utf8","utils","vctrs","withr","xfun","xtable","yaml"]},{"type":"character","attributes":{},"value":["4.3.0","0.8.0","1.1.0","3.6.3","2.1-0","1.9.1","4.3.0","4.3.0","0.6.37","1.1.4","0.24.0","1.0.6","1.2.0","1.0.0","0.1.3","3.5.0","1.7.0","4.3.0","4.3.0","4.3.0","0.3.4","1.1.3","0.5.8.1","1.6.4","1.6.15","0.1.4","1.8.8","1.48","1.3.2","1.0.4","1.9.3","2.0.3","1.13","2.0.1","4.3.0","0.12","0.5.0","1.9.0","2.0.3","1.3.0","1.0.2","2.5.1","1.0.13","2.1.5","1.1.4","2.28","0.16.0","0.4.9.9000","1.3.0","1.9.1","2.1.0","0.8.6","4.3.0","1.8.4","1.5.1","0.1.1","3.2.1","1.3.1","1.2.1","2.0.0","0.3.0","4.3.0","0.4.0","1.2.4","4.3.0","0.6.5","3.0.1","0.47","1.8-4","2.3.10"]}]}]}
 </script>
 <!--/html_preserve-->
 
