@@ -543,25 +543,6 @@ The survey is now finished. You may close the window.
 ```{r}
 #| context: server
 
-##################
-# Survey Configs #
-##################
-
-config <- sd_config(
-  skip_if = tibble::tribble(
-    ~question_id,         ~question_value, ~target,
-    "screenout",          "blue",          "end_screenout",
-    "consent_age",        "no",            "end_consent",
-    "consent_understand", "no",            "end_consent"
-  ),
-  show_if = tibble::tribble(
-    ~question_id,         ~question_value, ~target,
-    "like_fruit",         "yes",           "fav_fruit",
-    "like_fruit",         "kind_of",       "fav_fruit"
-  ),
-  all_questions_required = TRUE
-)
-
 sd_question(
   type  = "text",
   id    = "respondent_name",
@@ -569,19 +550,26 @@ sd_question(
   reactive = TRUE
 )
 
-##########################
-# Conjoint Question Data #
-##########################
+###########################
+# Conjoint Question Setup #
+###########################
 
+# Reach in the full survey design
 survey <- read_csv("choice_questions.csv")
+
+# Sample a random respondentID
 respondentID <- sample(survey$respID, 1)
 
-# Store custom value
+# Store the respondentID
 sd_store_value(respondentID, "respID")
 
+# Filter for the rows for the chosen respondentID
 df <- survey %>%
     filter(respID == respondentID) %>%
     mutate(image = paste0("images/", image))
+
+# Function to create the labels for a choice question
+# based on the values in df
 
 make_cbc_options <- function(df) {
   alt1 <- df %>% filter(altID == 1)
@@ -613,12 +601,16 @@ make_cbc_options <- function(df) {
   return(options)
 }
 
+# Create the options for each choice question
+
 cbc1_options <- make_cbc_options(df %>% filter(qID == 1)) 
 cbc2_options <- make_cbc_options(df %>% filter(qID == 2))
 cbc3_options <- make_cbc_options(df %>% filter(qID == 3))
 cbc4_options <- make_cbc_options(df %>% filter(qID == 4))
 cbc5_options <- make_cbc_options(df %>% filter(qID == 5))
 cbc6_options <- make_cbc_options(df %>% filter(qID == 6))
+
+# Create each choice question
 
 sd_question(
   type   = 'mc_buttons',
@@ -673,13 +665,37 @@ sd_question(
 ################
 
 db <- sd_database(
-  host       = "aws-0-us-east-1.pooler.supabase.com",
-  db_name    = "postgres",
-  port       = "6543",
-  user       = "postgres.hwumdvjnymbrgeemvrhq",
-  table_name = "conjoint",
-  gssencmode = "disable"
+  host   = "aws-0-us-east-1.pooler.supabase.com",
+  dbname = "postgres",
+  port   = "6543",
+  user   = "postgres.hwumdvjnymbrgeemvrhq",
+  table  = "conjoint"
 )
+
+################
+# config setup #
+################
+
+config <- sd_config(
+  skip_if = tibble::tribble(
+    ~question_id,         ~question_value, ~target,
+    "screenout",          "blue",          "end_screenout",
+    "consent_age",        "no",            "end_consent",
+    "consent_understand", "no",            "end_consent"
+  ),
+  show_if = tibble::tribble(
+    ~question_id,         ~question_value, ~target,
+    "like_fruit",         "yes",           "fav_fruit",
+    "like_fruit",         "kind_of",       "fav_fruit"
+  ),
+  all_questions_required = TRUE
+)
+
+####################################
+# Don't change anything below here #
+####################################
+
+# The sd_server function initiates your survey - don't change this
 
 sd_server(
   input   = input,
