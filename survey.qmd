@@ -9,23 +9,15 @@ filters: [surveydown]
 #| warning: false
 #| message: false
 
-# To install the R package, run this in your R console:
-# remotes::install_github("jhelvy/surveydown", force = TRUE)
+# Run this in your Console to install the latest version of the R package:
+# remotes::install_github("surveydown-dev/surveydown", force = TRUE)
 
-# To install the Quarto extension, run this in your R console:
+# Run this to install or update the Quarto extension to the latest version:
 # surveydown::sd_update_extension()
 
-# To define your surveydown password, run this in your R console:
-# surveydown::sd_set_password("your_password")
-
-# To check surveydown versions, run this in your R console:
-# surveydown::sd_check_versions()
-
-# Load the surveydown package
+# Load needed packages
 library(surveydown)
-
-# Load other packages
-library(tidyverse)
+library(dplyr)
 library(glue)
 
 # Run initial setup function (essential - do not delete)

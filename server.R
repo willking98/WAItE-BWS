@@ -1,29 +1,18 @@
-###############################
-# Normal Reactive Question(s) #
-###############################
+#################################
+# Deifne the Conjoint Questions #
+#################################
 
-sd_question(
-  type  = "text",
-  id    = "respondent_name",
-  label = "What is your name?",
-  reactive = TRUE
-)
-
-####################################################
-# Conjoint Questions - A Type of Reactive Question #
-####################################################
-
-# Reach in the full survey design
-survey <- read_csv("choice_questions.csv")
+# Read in the full survey design file
+design <- readr::read_csv("choice_questions.csv")
 
 # Sample a random respondentID
-respondentID <- sample(survey$respID, 1)
+respondentID <- sample(design$respID, 1)
 
 # Store the respondentID
 sd_store_value(respondentID, "respID")
 
 # Filter for the rows for the chosen respondentID
-df <- survey %>%
+df <- design %>%
   filter(respID == respondentID) %>%
   mutate(image = paste0("images/", image))
 
@@ -31,9 +20,9 @@ df <- survey %>%
 # based on the values in df
 
 make_cbc_options <- function(df) {
-  alt1 <- df %>% filter(altID == 1)
-  alt2 <- df %>% filter(altID == 2)
-  alt3 <- df %>% filter(altID == 3)
+  alt1 <- df |> filter(altID == 1)
+  alt2 <- df |> filter(altID == 2)
+  alt3 <- df |> filter(altID == 3)
 
   options <- c("option_1", "option_2", "option_3")
 
@@ -62,12 +51,12 @@ make_cbc_options <- function(df) {
 
 # Create the options for each choice question
 
-cbc1_options <- make_cbc_options(df %>% filter(qID == 1))
-cbc2_options <- make_cbc_options(df %>% filter(qID == 2))
-cbc3_options <- make_cbc_options(df %>% filter(qID == 3))
-cbc4_options <- make_cbc_options(df %>% filter(qID == 4))
-cbc5_options <- make_cbc_options(df %>% filter(qID == 5))
-cbc6_options <- make_cbc_options(df %>% filter(qID == 6))
+cbc1_options <- make_cbc_options(df |> filter(qID == 1))
+cbc2_options <- make_cbc_options(df |> filter(qID == 2))
+cbc3_options <- make_cbc_options(df |> filter(qID == 3))
+cbc4_options <- make_cbc_options(df |> filter(qID == 4))
+cbc5_options <- make_cbc_options(df |> filter(qID == 5))
+cbc6_options <- make_cbc_options(df |> filter(qID == 6))
 
 # Create each choice question
 
