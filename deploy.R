@@ -1,4 +1,4 @@
 rsconnect::deployDoc(
-  doc = "apple.qmd",
-  appName = "apple"
+  doc = "survey.qmd",
+  appName = "survey"
 )
