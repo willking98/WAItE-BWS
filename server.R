@@ -109,19 +109,6 @@ sd_question(
 )
 
 ################
-# Server Setup #
-################
-
-db <- sd_database(
-  host   = "",
-  dbname = "",
-  port   = "",
-  user   = "",
-  table  = "",
-  pause  = TRUE
-)
-
-################
 # config setup #
 ################
 
