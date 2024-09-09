@@ -55,9 +55,13 @@ db <- sd_database(
 
 ::: {#welcome .sd-page}
 
-# Welcome to our survey!
+# Demo survey of choice-based-conjoint questions
 
-Thank you for participating in this survey, which is part of a research effort by The George Washington University. For this survey, we will ask you about your preferences for different types of apples.
+> This is a demo survey showcasing the functionality of <a href="https://surveydown.org" target="_blank">surveydown</a>. It doesn't collect any data.
+>
+> The GitHub repo of this demo can be accessed <a href="https://github.com/surveydown-dev/demo-choice-based-conjoint" target="_blank">here</a>.
+
+This is a demo of choice-based-conjoint survey. For this survey, we will ask you about your preferences for different types of apples.
 
 ```{r}
 sd_next(next_page = 'consent')
