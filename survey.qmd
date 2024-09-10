@@ -23,7 +23,6 @@ filters: [surveydown]
 # Load packages #
 #################
 
-# Load the package
 library(surveydown)
 library(dplyr)
 library(glue)
