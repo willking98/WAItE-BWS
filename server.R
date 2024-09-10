@@ -64,48 +64,42 @@ sd_question(
   type   = 'mc_buttons',
   id     = 'cbc_q1',
   label  = "(1 of 6) If these were your only options, which would you choose?",
-  option = cbc1_options,
-  reactive = TRUE
+  option = cbc1_options
 )
 
 sd_question(
   type   = 'mc_buttons',
   id     = 'cbc_q2',
   label  = "(2 of 6) If these were your only options, which would you choose?",
-  option = cbc2_options,
-  reactive = TRUE
+  option = cbc2_options
 )
 
 sd_question(
   type   = 'mc_buttons',
   id     = 'cbc_q3',
   label  = "(3 of 6) If these were your only options, which would you choose?",
-  option = cbc3_options,
-  reactive = TRUE
+  option = cbc3_options
 )
 
 sd_question(
   type   = 'mc_buttons',
   id     = 'cbc_q4',
   label  = "(4 of 6) If these were your only options, which would you choose?",
-  option = cbc4_options,
-  reactive = TRUE
+  option = cbc4_options
 )
 
 sd_question(
   type   = 'mc_buttons',
   id     = 'cbc_q5',
   label  = "(5 of 6) If these were your only options, which would you choose?",
-  option = cbc5_options,
-  reactive = TRUE
+  option = cbc5_options
 )
 
 sd_question(
   type   = 'mc_buttons',
   id     = 'cbc_q6',
   label  = "(6 of 6) If these were your only options, which would you choose?",
-  option = cbc6_options,
-  reactive = TRUE
+  option = cbc6_options
 )
 
 ################

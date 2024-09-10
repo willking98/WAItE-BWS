@@ -276,7 +276,7 @@ sd_next(next_page = 'cbc_q1')
 # Conjoint Question 1
 
 ```{r}
-sd_display_question('cbc_q1')
+sd_output("cbc_q1", type = "question")
 ```
 
 <br>
@@ -292,7 +292,7 @@ sd_next(next_page = 'cbc_q2')
 # Conjoint Question 2
 
 ```{r}
-sd_display_question('cbc_q2')
+sd_output("cbc_q2", type = "question")
 ```
 
 <br>
@@ -308,7 +308,7 @@ sd_next(next_page = 'cbc_q3')
 # Conjoint Question 3
 
 ```{r}
-sd_display_question('cbc_q3')
+sd_output("cbc_q3", type = "question")
 ```
 
 <br>
@@ -324,7 +324,7 @@ sd_next(next_page = 'cbc_q4')
 # Conjoint Question 4
 
 ```{r}
-sd_display_question('cbc_q4')
+sd_output("cbc_q4", type = "question")
 ```
 
 <br>
@@ -340,7 +340,7 @@ sd_next(next_page = 'cbc_q5')
 # Conjoint Question 5
 
 ```{r}
-sd_display_question('cbc_q5')
+sd_output("cbc_q5", type = "question")
 ```
 
 <br>
@@ -356,7 +356,7 @@ sd_next(next_page = 'cbc_q6')
 # Conjoint Question 6
 
 ```{r}
-sd_display_question('cbc_q6')
+sd_output("cbc_q6", type = "question")
 ```
 
 <br>
