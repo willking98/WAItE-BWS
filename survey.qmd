@@ -56,9 +56,11 @@ db <- sd_database(
 
 # Demo survey of choice-based-conjoint questions
 
-> This is a demo survey showcasing the functionality of <a href="https://surveydown.org" target="_blank">surveydown</a>. It doesn't collect any data.
->
-> The GitHub repo of this demo can be accessed <a href="https://github.com/surveydown-dev/demo-choice-based-conjoint" target="_blank">here</a>.
+::: {.callout-note}
+This is a demo survey showcasing the functionality of <a href="https://surveydown.org" target="_blank">surveydown</a>. It doesn't collect any data.
+
+The GitHub repo of this demo can be accessed <a href="https://github.com/surveydown-dev/demo-choice-based-conjoint" target="_blank">here</a>.
+:::
 
 This is a demo of choice-based-conjoint survey. For this survey, we will ask you about your preferences for different types of apples.
 
@@ -96,13 +98,10 @@ sd_question(
     'No'  = 'no'
   )
 )
-```
 
-<br>
-
-```{r}
 sd_next(next_page = 'favorite_fruit')
 ```
+
 :::
 
 ::: {#favorite_fruit .sd-page}
@@ -126,11 +125,7 @@ sd_question(
   id    = 'fav_fruit',
   label = "What is your favorite fruit?"
 )
-```
 
-<br>
-
-```{r}
 sd_next(next_page = 'screening')
 ```
 
@@ -154,11 +149,7 @@ sd_question(
     'Red'  = 'red'
   )
 )
-```
 
-<br>
-
-```{r}
 sd_next(next_page = 'educational')
 ```
 
@@ -246,11 +237,7 @@ sd_question(
   label  = "For example, if these were the only apples available, which would you choose?",
   option = apple_buttons_option
 )
-```
 
-<br>
-
-```{r}
 sd_next(next_page = 'cbc_intro')
 ```
 
@@ -276,11 +263,6 @@ sd_next(next_page = 'cbc_q1')
 
 ```{r}
 sd_output("cbc_q1", type = "question")
-```
-
-<br>
-
-```{r}
 sd_next(next_page = 'cbc_q2')
 ```
 
@@ -292,11 +274,6 @@ sd_next(next_page = 'cbc_q2')
 
 ```{r}
 sd_output("cbc_q2", type = "question")
-```
-
-<br>
-
-```{r}
 sd_next(next_page = 'cbc_q3')
 ```
 
@@ -308,11 +285,6 @@ sd_next(next_page = 'cbc_q3')
 
 ```{r}
 sd_output("cbc_q3", type = "question")
-```
-
-<br>
-
-```{r}
 sd_next(next_page = 'cbc_q4')
 ```
 
@@ -324,11 +296,6 @@ sd_next(next_page = 'cbc_q4')
 
 ```{r}
 sd_output("cbc_q4", type = "question")
-```
-
-<br>
-
-```{r}
 sd_next(next_page = 'cbc_q5')
 ```
 
@@ -340,11 +307,6 @@ sd_next(next_page = 'cbc_q5')
 
 ```{r}
 sd_output("cbc_q5", type = "question")
-```
-
-<br>
-
-```{r}
 sd_next(next_page = 'cbc_q6')
 ```
 
@@ -356,11 +318,6 @@ sd_next(next_page = 'cbc_q6')
 
 ```{r}
 sd_output("cbc_q6", type = "question")
-```
-
-<br>
-
-```{r}
 sd_next(next_page = 'apple_knowledge')
 ```
 
@@ -410,13 +367,10 @@ sd_question(
   ),
   width = 500
 )
-```
 
-<br>
-
-```{r}
 sd_next(next_page = 'demographics')
 ```
+
 :::
 
 ::: {#demographics .sd-page}
@@ -524,14 +478,10 @@ sd_question(
   
   Your feedback will help us make future improvements :)"
 )
-```
-:::
 
-<br>
-
-```{r}
 sd_next(next_page = 'end_normal')
 ```
+:::
 
 :::
 
