@@ -1,55 +1,16 @@
 ---
-server: shiny
-filters: [surveydown]
+format:
+  html:
+    self-contained: true
+echo: false
+message: false
+warning: false
 ---
 
 ```{r}
-#| context: setup
-#| echo: false
-#| warning: false
-#| message: false
-
-################
-# Installation #
-################
-
-# Run this in your R Console to install the latest version of the package:
-# remotes::install_github("surveydown-dev/surveydown", force = TRUE)
-
-# Run this to install or update the Quarto extension to the latest version:
-# surveydown::sd_update_extension()
-
-#################
-# Load packages #
-#################
-
 library(surveydown)
 library(dplyr)
 library(glue)
-
-# Run initial setup function (essential - do not delete)
-sd_setup()
-
-##################
-# Database setup #
-##################
-
-# surveydown stores data on a database that you define at https://supabase.com/
-# To connect to a database, update the sd_database() function with details
-# from your supabase database. For this demo, we set ignore = TRUE, which will
-# ignore the settings and won't attempt to connect to the database. This is
-# helpful for local testing if you don't want to record testing data in the
-# database table. See the documentation for details:
-# https://surveydown.org/store-data
-
-db <- sd_database(
-  host   = "",
-  dbname = "",
-  port   = "",
-  user   = "",
-  table  = "",
-  ignore = TRUE
-)
 ```
 
 ::: {#welcome .sd-page}
@@ -65,7 +26,7 @@ The GitHub repo of this demo can be accessed <a href="https://github.com/surveyd
 This is a demo of choice-based-conjoint survey. For this survey, we will ask you about your preferences for different types of apples.
 
 ```{r}
-sd_next(next_page = 'consent')
+sd_next()
 ```
 
 :::
@@ -99,7 +60,7 @@ sd_question(
   )
 )
 
-sd_next(next_page = 'favorite_fruit')
+sd_next()
 ```
 
 :::
@@ -126,7 +87,7 @@ sd_question(
   label = "What is your favorite fruit?"
 )
 
-sd_next(next_page = 'screening')
+sd_next()
 ```
 
 :::
@@ -150,7 +111,7 @@ sd_question(
   )
 )
 
-sd_next(next_page = 'educational')
+sd_next()
 ```
 
 :::
@@ -187,10 +148,8 @@ Fuji | Gala | Honeycrisp | Pink Lady | Red Delicious
 -----|------|------------|-----------|--------------
 <img src="images/fuji.jpg" width=100> | <img src="images/gala.jpg" width=100> | <img src="images/honeycrisp.jpg" width=100> | <img src="images/pinkLady.jpg" width=100> | <img src="images/redDelicious.jpg" width=100>
 
-</div>
-
 ```{r}
-sd_next(next_page = 'cbc_practice')
+sd_next()
 ```
 
 :::
@@ -238,7 +197,7 @@ sd_question(
   option = apple_buttons_option
 )
 
-sd_next(next_page = 'cbc_intro')
+sd_next()
 ```
 
 :::
@@ -252,7 +211,7 @@ Great work!
 We will now show you 6 sets of choice questions starting on the next page.
 
 ```{r}
-sd_next(next_page = 'cbc_q1')
+sd_next()
 ```
 
 :::
@@ -263,7 +222,7 @@ sd_next(next_page = 'cbc_q1')
 
 ```{r}
 sd_output("cbc_q1", type = "question")
-sd_next(next_page = 'cbc_q2')
+sd_next()
 ```
 
 :::
@@ -274,7 +233,7 @@ sd_next(next_page = 'cbc_q2')
 
 ```{r}
 sd_output("cbc_q2", type = "question")
-sd_next(next_page = 'cbc_q3')
+sd_next()
 ```
 
 :::
@@ -285,7 +244,7 @@ sd_next(next_page = 'cbc_q3')
 
 ```{r}
 sd_output("cbc_q3", type = "question")
-sd_next(next_page = 'cbc_q4')
+sd_next()
 ```
 
 :::
@@ -296,7 +255,7 @@ sd_next(next_page = 'cbc_q4')
 
 ```{r}
 sd_output("cbc_q4", type = "question")
-sd_next(next_page = 'cbc_q5')
+sd_next()
 ```
 
 :::
@@ -307,7 +266,7 @@ sd_next(next_page = 'cbc_q5')
 
 ```{r}
 sd_output("cbc_q5", type = "question")
-sd_next(next_page = 'cbc_q6')
+sd_next()
 ```
 
 :::
@@ -318,7 +277,7 @@ sd_next(next_page = 'cbc_q6')
 
 ```{r}
 sd_output("cbc_q6", type = "question")
-sd_next(next_page = 'apple_knowledge')
+sd_next()
 ```
 
 :::
@@ -368,7 +327,7 @@ sd_question(
   width = 500
 )
 
-sd_next(next_page = 'demographics')
+sd_next()
 ```
 
 :::
@@ -479,7 +438,7 @@ sd_question(
   Your feedback will help us make future improvements :)"
 )
 
-sd_next(next_page = 'end_normal')
+sd_next()
 ```
 :::
 
@@ -498,36 +457,35 @@ The survey is finished. Thank you for your feedback!
 Your completion code is: **`r completion_code`**.
 
 You may close the window now.
+
+```{r}
+sd_close()
+```
+
 :::
 
 ::: {#end_consent .sd-page}
+
 # End Page
 
 The survey is now finished. You may close the window.
+
+```{r}
+sd_close()
+```
+
 :::
 
 ::: {#end_screenout .sd-page}
+
 # End Page
 
 Sorry, we wanted you to select the **red** button.
 
 The survey is now finished. You may close the window.
-:::
 
 ```{r}
-#| context: server
-
-# Instead of writing server codes,
-# we can use a separate server.R script and source it.
-source("server.R")
-
-# The sd_server() function initiates your survey. Don't change this.
-# Don't move sd_server() into server.R.
-sd_server(
-  input   = input,
-  output  = output,
-  session = session,
-  config  = config,
-  db      = db
-)
+sd_close()
 ```
+
+:::
