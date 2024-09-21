@@ -1,6 +1,5 @@
 # remotes::install_github("surveydown-dev/surveydown", force = TRUE)
-# library(surveydown)
-devtools::load_all("../surveydown")
+library(surveydown)
 library(dplyr)
 library(glue)
 
@@ -22,9 +21,6 @@ db <- sd_database(
   table  = "",
   ignore = TRUE
 )
-
-# UI setup
-ui <- sd_ui()
 
 # Server setup
 server <- function(input, output, session) {
@@ -138,7 +134,7 @@ server <- function(input, output, session) {
       "like_fruit",         "yes",           "fav_fruit",
       "like_fruit",         "kind_of",       "fav_fruit"
     ),
-    all_questions_required = FALSE
+    all_questions_required = TRUE
   )
 
   # sd_server() initiates your survey - don't change it
@@ -153,4 +149,4 @@ server <- function(input, output, session) {
 }
 
 # shinyApp() initiates your app - don't change it
-shiny::shinyApp(ui = ui, server = server)
+shiny::shinyApp(ui = sd_ui(), server = server)
