@@ -5,8 +5,6 @@ warning: false
 
 ```{r}
 library(surveydown)
-library(dplyr)
-library(glue)
 ```
 
 ::: {#welcome .sd-page}
