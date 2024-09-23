@@ -121,29 +121,22 @@ server <- function(input, output, session) {
     option = cbc6_options
   )
 
-  # Config setup
-  config <- sd_config(
-    skip_if = tibble::tribble(
-      ~question_id,         ~question_value, ~target,
-      "screenout",          "blue",          "end_screenout",
-      "consent_age",        "no",            "end_consent",
-      "consent_understand", "no",            "end_consent"
-    ),
-    show_if = tibble::tribble(
-      ~question_id,         ~question_value, ~target,
-      "like_fruit",         "yes",           "fav_fruit",
-      "like_fruit",         "kind_of",       "fav_fruit"
-    ),
-    all_questions_required = TRUE
+  # Define any conditional skip logic here (skip to page if a condition is true)
+  sd_skip_if(
+    input$screenout == "blue" ~ "end_screenout",
+    input$consent_age == "no" ~ "end_consent",
+    input$consent_understand == "no" ~ "end_consent"
   )
 
-  # sd_server() initiates your survey - don't change it
+  # Define any conditional display logic here (show a question if a condition is true)
+  sd_show_if(
+    input$like_fruit %in% c("yes", "kind_of") ~ "fav_fruit"
+  )
+
+  # Database designation and other settings
   sd_server(
-    input   = input,
-    output  = output,
-    session = session,
-    config  = config,
-    db      = db
+    db = db,
+    all_questions_required = TRUE
   )
 
 }

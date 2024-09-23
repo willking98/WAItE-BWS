@@ -1,4 +1,5 @@
 ---
+format: html
 echo: false
 warning: false
 ---
