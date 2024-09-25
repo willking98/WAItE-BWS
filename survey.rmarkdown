@@ -8,15 +8,21 @@ warning: false
 library(surveydown)
 ```
 
+
+
 ::: {#welcome .sd-page}
 
 # Welcome to our survey!
 
 This online survey contains a series of questions and exercises about health and quality of life. In some questions, we will ask about your own health, and to compare different health problems. In other questions, we will ask them to make choices between different scenarios involving poor health and disability. There are no right or wrong answers - we are just interested in your opinion.
 
+
+
 ```{r}
 sd_next()
 ```
+
+
 
 :::
 
@@ -27,6 +33,8 @@ sd_next()
 This survey is being conducted by researchers at Newcastle University. We will not be collecting any identifying data, such as your name or address. The whole survey will take approximately 10 to 15 minutes to complete. Your participation is voluntary and you may stop the survey at any time.
 
 If you would like to participate, please answer the following questions:
+
+
 
 ```{r}
 sd_question(
@@ -50,10 +58,11 @@ sd_question(
 )
 ```
 
-
 ```{r}
 sd_next()
 ```
+
+
 
 :::
 
@@ -62,6 +71,8 @@ sd_next()
 # Attention Check
 
 Please click **"Red"**, if you choose "Blue" you'll be screened out.
+
+
 
 ```{r}
 sd_question(
@@ -76,6 +87,8 @@ sd_question(
 
 sd_next()
 ```
+
+
 
 :::
 
@@ -185,9 +198,13 @@ Within each area of quality of life there are 5 levels which range from **(Never
 - People **always** treat me differently when I go out.
 
 
+
+
 ```{r}
 sd_next()
 ```
+
+
 
 :::
 
@@ -198,6 +215,8 @@ sd_next()
 Using the areas of health we have shown you please answer the following questions about your health. Your answer to these questions will be a health state.
 
 ## What is your current health state?
+
+
 
 ```{r}
 
@@ -260,6 +279,8 @@ sd_question(
 sd_next()
 ```
 
+
+
 :::
 
 ::: {#cbc_practice .sd-page}
@@ -267,6 +288,8 @@ sd_next()
 # Practice Question
 
 Your response to the previous questions describes one health state. We'll now begin the choice tasks. This first question is a practice question. Please read through the health states carefully and select the health state you prefer.
+
+
 
 ```{r}
 # Define the option vector
@@ -398,6 +421,8 @@ sd_question(
 sd_next()
 
 ```
+
+
 :::
 
 ::: {#cbc_intro .sd-page}
@@ -408,15 +433,21 @@ Great work!
 
 We will now show you 10 sets of choice questions starting on the next page. Please take your time to read through each question carefully. Remember there are no right or wrong answers!
 
+
+
 ```{r}
 sd_next()
 ```
+
+
 
 :::
 
 ::: {#cbc_q1 .sd-page}
 
 # Question 1 
+
+
 
 ```{r}
 sd_output('cbc_q1', type = 'question')
@@ -431,11 +462,15 @@ sd_output('cbc_q1_w_treated', type = 'question')
 
 sd_next()
 ```
+
+
 :::
 
 ::: {#cbc_q2 .sd-page}
 
 # Question 2
+
+
 ```{r}
 sd_output('cbc_q2', type = 'question')
 
@@ -449,11 +484,15 @@ sd_output('cbc_q2_w_treated', type = 'question')
 
 sd_next()
 ```
+
+
 :::
 
 ::: {#cbc_q3 .sd-page}
 
 # Question 3
+
+
 
 ```{r}
 sd_output('cbc_q3', type = 'question')
@@ -468,11 +507,15 @@ sd_output('cbc_q3_w_treated', type = 'question')
 
 sd_next()
 ```
+
+
 :::
 
 ::: {#cbc_q4 .sd-page}
 
 # Question 4
+
+
 
 ```{r}
 sd_output('cbc_q4', type = 'question')
@@ -487,12 +530,16 @@ sd_output('cbc_q4_w_treated', type = 'question')
 
 sd_next()
 ```
+
+
 :::
 
 
 ::: {#cbc_q5 .sd-page}
 
 # Question 5
+
+
 
 ```{r}
 sd_output('cbc_q5', type = 'question')
@@ -507,11 +554,15 @@ sd_output('cbc_q5_w_treated', type = 'question')
 
 sd_next()
 ```
+
+
 :::
 
 ::: {#cbc_q6 .sd-page}
 
 # Question 6
+
+
 
 ```{r}
 sd_output('cbc_q6', type = 'question')
@@ -526,11 +577,15 @@ sd_output('cbc_q6_w_treated', type = 'question')
 
 sd_next()
 ```
+
+
 :::
 
 ::: {#cbc_q7 .sd-page}
 
 # Question 7
+
+
 
 ```{r}
 sd_output('cbc_q7', type = 'question')
@@ -545,11 +600,15 @@ sd_output('cbc_q7_w_treated', type = 'question')
 
 sd_next()
 ```
+
+
 :::
 
 ::: {#cbc_q8 .sd-page}
 
 # Question 8
+
+
 
 ```{r}
 sd_output('cbc_q8', type = 'question')
@@ -564,10 +623,14 @@ sd_output('cbc_q8_w_treated', type = 'question')
 
 sd_next()
 ```
+
+
 :::
 ::: {#cbc_q9 .sd-page}
 
 # Question 9
+
+
 
 ```{r}
 sd_output('cbc_q9', type = 'question')
@@ -582,10 +645,14 @@ sd_output('cbc_q9_w_treated', type = 'question')
 
 sd_next()
 ```
+
+
 :::
 ::: {#cbc_q10 .sd-page}
 
 # Question 10
+
+
 
 ```{r}
 sd_output('cbc_q10', type = 'question')
@@ -600,6 +667,8 @@ sd_output('cbc_q10_w_treated', type = 'question')
 
 sd_next()
 ```
+
+
 :::
 
 ::: {#apple_knowledge .sd-page}
@@ -607,6 +676,8 @@ sd_next()
 # Survey Feedback
 
 Please take a minute to answer the following questions. We'd greatly appreciate your input.
+
+
 
 ```{r}
 sd_question(
@@ -652,6 +723,8 @@ sd_question(
 sd_next()
 ```
 
+
+
 :::
 
 ::: {#demographics .sd-page}
@@ -660,6 +733,8 @@ sd_next()
 ## Nice job!
 
 We're almost done! We'd just like to ask just a few more questions about you which we will only use for analyzing our survey data.
+
+
 
 ```{r}
 # Construct the list of years
@@ -762,6 +837,8 @@ sd_question(
 sd_next()
 
 ```
+
+
 :::
 
 
@@ -773,6 +850,8 @@ The survey is finished. Thank you for your feedback!
 
 Please click the button below to complete your participation 
 
+
+
 ```{r}
 sd_redirect(
   id = "redirect",
@@ -782,6 +861,8 @@ sd_redirect(
 )
 ```
 
+
+
 :::
 
 ::: {#end_consent .sd-page}
@@ -789,6 +870,8 @@ sd_redirect(
 # End Page
 
 The survey is now finished. You may close the window.
+
+
 
 ```{r}
 sd_redirect(
@@ -798,6 +881,8 @@ sd_redirect(
   button = TRUE
 )
 ```
+
+
 
 :::
 
@@ -809,6 +894,8 @@ Sorry, we wanted you to select the **red** button.
 
 The survey is now finished. You may close the window.
 
+
+
 ```{r}
 sd_redirect(
   id = "redirect",
@@ -818,4 +905,7 @@ sd_redirect(
 )
 ```
 
+
+
 :::
+

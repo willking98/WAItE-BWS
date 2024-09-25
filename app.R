@@ -294,518 +294,599 @@ server <- function(input, output, session) {
   # Create each choice question
   
   sd_question(
-    type   = 'mc_buttons',
-    id     = 'cbc_q1',
-    label  = "(1 of 10) Select the **best** option",
-    option = cbc1_options
+      type   = 'mc_buttons',
+      id     = 'cbc_q1',
+      label  = "(1 of 10) Select the **best** option",
+      option = cbc1_options,
+      direction = "vertical"
   )
   
   sd_question(
-    type   = 'mc_buttons',
-    id     = 'cbc_q1_w_tired',
-    label  = "(1 of 10) Select the **worst** option",
-    option = cbc1_options_w_tired
+      type   = 'mc_buttons',
+      id     = 'cbc_q1_w_tired',
+      label  = "(1 of 10) Select the **worst** option",
+      option = cbc1_options_w_tired,
+      direction = "vertical"
   )
   sd_question(
-    type   = 'mc_buttons',
-    id     = 'cbc_q1_w_walking',
-    label  = "(1 of 10) Select the **worst** option",
-    option = cbc1_options_w_walking
+      type   = 'mc_buttons',
+      id     = 'cbc_q1_w_walking',
+      label  = "(1 of 10) Select the **worst** option",
+      option = cbc1_options_w_walking,
+      direction = "vertical"
   )
   sd_question(
-    type   = 'mc_buttons',
-    id     = 'cbc_q1_w_sports',
-    label  = "(1 of 10) Select the **worst** option",
-    option = cbc1_options_w_sports
+      type   = 'mc_buttons',
+      id     = 'cbc_q1_w_sports',
+      label  = "(1 of 10) Select the **worst** option",
+      option = cbc1_options_w_sports,
+      direction = "vertical"
   )
   sd_question(
-    type   = 'mc_buttons',
-    id     = 'cbc_q1_w_concentration',
-    label  = "(1 of 10) Select the **worst** option",
-    option = cbc1_options_w_concentration
+      type   = 'mc_buttons',
+      id     = 'cbc_q1_w_concentration',
+      label  = "(1 of 10) Select the **worst** option",
+      option = cbc1_options_w_concentration,
+      direction = "vertical"
   )
   sd_question(
-    type   = 'mc_buttons',
-    id     = 'cbc_q1_w_embarrassed',
-    label  = "(1 of 10) Select the **worst** option",
-    option = cbc1_options_w_embarrassed
+      type   = 'mc_buttons',
+      id     = 'cbc_q1_w_embarrassed',
+      label  = "(1 of 10) Select the **worst** option",
+      option = cbc1_options_w_embarrassed,
+      direction = "vertical"
   )
   sd_question(
-    type   = 'mc_buttons',
-    id     = 'cbc_q1_w_unhappiness',
-    label  = "(1 of 10) Select the **worst** option",
-    option = cbc1_options_w_unhappiness
+      type   = 'mc_buttons',
+      id     = 'cbc_q1_w_unhappiness',
+      label  = "(1 of 10) Select the **worst** option",
+      option = cbc1_options_w_unhappiness,
+      direction = "vertical"
   )
   sd_question(
-    type   = 'mc_buttons',
-    id     = 'cbc_q1_w_treated',
-    label  = "(1 of 10) Select the **worst** option",
-    option = cbc1_options_w_treated
-  )
-  
-  ###############################################################################
-  sd_question(
-    type   = 'mc_buttons',
-    id     = 'cbc_q2',
-    label  = "(2 of 10) Select the **best** option",
-    option = cbc2_options
-  )
-  
-  sd_question(
-    type   = 'mc_buttons',
-    id     = 'cbc_q2_w_tired',
-    label  = "(2 of 10) Select the **worst** option",
-    option = cbc2_options_w_tired
-  )
-  sd_question(
-    type   = 'mc_buttons',
-    id     = 'cbc_q2_w_walking',
-    label  = "(2 of 10) Select the **worst** option",
-    option = cbc2_options_w_walking
-  )
-  sd_question(
-    type   = 'mc_buttons',
-    id     = 'cbc_q2_w_sports',
-    label  = "(2 of 10) Select the **worst** option",
-    option = cbc2_options_w_sports
-  )
-  sd_question(
-    type   = 'mc_buttons',
-    id     = 'cbc_q2_w_concentration',
-    label  = "(2 of 10) Select the **worst** option",
-    option = cbc2_options_w_concentration
-  )
-  sd_question(
-    type   = 'mc_buttons',
-    id     = 'cbc_q2_w_embarrassed',
-    label  = "(2 of 10) Select the **worst** option",
-    option = cbc2_options_w_embarrassed
-  )
-  sd_question(
-    type   = 'mc_buttons',
-    id     = 'cbc_q2_w_unhappiness',
-    label  = "(2 of 10) Select the **worst** option",
-    option = cbc2_options_w_unhappiness
-  )
-  sd_question(
-    type   = 'mc_buttons',
-    id     = 'cbc_q2_w_treated',
-    label  = "(2 of 10) Select the **worst** option",
-    option = cbc2_options_w_treated
+      type   = 'mc_buttons',
+      id     = 'cbc_q1_w_treated',
+      label  = "(1 of 10) Select the **worst** option",
+      option = cbc1_options_w_treated,
+      direction = "vertical"
   )
   
   ###############################################################################
   sd_question(
-    type   = 'mc_buttons',
-    id     = 'cbc_q3',
-    label  = "(3 of 10) Select the **best** option",
-    option = cbc3_options
+      type   = 'mc_buttons',
+      id     = 'cbc_q2',
+      label  = "(2 of 10) Select the **best** option",
+      option = cbc2_options,
+      direction = "vertical"
   )
   
   sd_question(
-    type   = 'mc_buttons',
-    id     = 'cbc_q3_w_tired',
-    label  = "(3 of 10) Select the **worst** option",
-    option = cbc3_options_w_tired
+      type   = 'mc_buttons',
+      id     = 'cbc_q2_w_tired',
+      label  = "(2 of 10) Select the **worst** option",
+      option = cbc2_options_w_tired,
+      direction = "vertical"
   )
   sd_question(
-    type   = 'mc_buttons',
-    id     = 'cbc_q3_w_walking',
-    label  = "(3 of 10) Select the **worst** option",
-    option = cbc3_options_w_walking
+      type   = 'mc_buttons',
+      id     = 'cbc_q2_w_walking',
+      label  = "(2 of 10) Select the **worst** option",
+      option = cbc2_options_w_walking,
+      direction = "vertical"
   )
   sd_question(
-    type   = 'mc_buttons',
-    id     = 'cbc_q3_w_sports',
-    label  = "(3 of 10) Select the **worst** option",
-    option = cbc3_options_w_sports
+      type   = 'mc_buttons',
+      id     = 'cbc_q2_w_sports',
+      label  = "(2 of 10) Select the **worst** option",
+      option = cbc2_options_w_sports,
+      direction = "vertical"
   )
   sd_question(
-    type   = 'mc_buttons',
-    id     = 'cbc_q3_w_concentration',
-    label  = "(3 of 10) Select the **worst** option",
-    option = cbc3_options_w_concentration
+      type   = 'mc_buttons',
+      id     = 'cbc_q2_w_concentration',
+      label  = "(2 of 10) Select the **worst** option",
+      option = cbc2_options_w_concentration,
+      direction = "vertical"
   )
   sd_question(
-    type   = 'mc_buttons',
-    id     = 'cbc_q3_w_embarrassed',
-    label  = "(3 of 10) Select the **worst** option",
-    option = cbc3_options_w_embarrassed
+      type   = 'mc_buttons',
+      id     = 'cbc_q2_w_embarrassed',
+      label  = "(2 of 10) Select the **worst** option",
+      option = cbc2_options_w_embarrassed,
+      direction = "vertical"
   )
   sd_question(
-    type   = 'mc_buttons',
-    id     = 'cbc_q3_w_unhappiness',
-    label  = "(3 of 10) Select the **worst** option",
-    option = cbc3_options_w_unhappiness
+      type   = 'mc_buttons',
+      id     = 'cbc_q2_w_unhappiness',
+      label  = "(2 of 10) Select the **worst** option",
+      option = cbc2_options_w_unhappiness,
+      direction = "vertical"
   )
   sd_question(
-    type   = 'mc_buttons',
-    id     = 'cbc_q3_w_treated',
-    label  = "(3 of 10) Select the **worst** option",
-    option = cbc3_options_w_treated
-  )
-  
-  ###############################################################################
-  sd_question(
-    type   = 'mc_buttons',
-    id     = 'cbc_q4',
-    label  = "(4 of 10) Select the **best** option",
-    option = cbc4_options
-  )
-  
-  sd_question(
-    type   = 'mc_buttons',
-    id     = 'cbc_q4_w_tired',
-    label  = "(4 of 10) Select the **worst** option",
-    option = cbc4_options_w_tired
-  )
-  sd_question(
-    type   = 'mc_buttons',
-    id     = 'cbc_q4_w_walking',
-    label  = "(4 of 10) Select the **worst** option",
-    option = cbc4_options_w_walking
-  )
-  sd_question(
-    type   = 'mc_buttons',
-    id     = 'cbc_q4_w_sports',
-    label  = "(4 of 10) Select the **worst** option",
-    option = cbc4_options_w_sports
-  )
-  sd_question(
-    type   = 'mc_buttons',
-    id     = 'cbc_q4_w_concentration',
-    label  = "(4 of 10) Select the **worst** option",
-    option = cbc4_options_w_concentration
-  )
-  sd_question(
-    type   = 'mc_buttons',
-    id     = 'cbc_q4_w_embarrassed',
-    label  = "(4 of 10) Select the **worst** option",
-    option = cbc4_options_w_embarrassed
-  )
-  sd_question(
-    type   = 'mc_buttons',
-    id     = 'cbc_q4_w_unhappiness',
-    label  = "(4 of 10) Select the **worst** option",
-    option = cbc4_options_w_unhappiness
-  )
-  sd_question(
-    type   = 'mc_buttons',
-    id     = 'cbc_q4_w_treated',
-    label  = "(4 of 10) Select the **worst** option",
-    option = cbc4_options_w_treated
+      type   = 'mc_buttons',
+      id     = 'cbc_q2_w_treated',
+      label  = "(2 of 10) Select the **worst** option",
+      option = cbc2_options_w_treated,
+      direction = "vertical"
   )
   
   ###############################################################################
   sd_question(
-    type   = 'mc_buttons',
-    id     = 'cbc_q5',
-    label  = "(5 of 10) Select the **best** option",
-    option = cbc5_options
+      type   = 'mc_buttons',
+      id     = 'cbc_q3',
+      label  = "(3 of 10) Select the **best** option",
+      option = cbc3_options,
+      direction = "vertical"
   )
   
   sd_question(
-    type   = 'mc_buttons',
-    id     = 'cbc_q5_w_tired',
-    label  = "(5 of 10) Select the **worst** option",
-    option = cbc5_options_w_tired
+      type   = 'mc_buttons',
+      id     = 'cbc_q3_w_tired',
+      label  = "(3 of 10) Select the **worst** option",
+      option = cbc3_options_w_tired,
+      direction = "vertical"
   )
   sd_question(
-    type   = 'mc_buttons',
-    id     = 'cbc_q5_w_walking',
-    label  = "(5 of 10) Select the **worst** option",
-    option = cbc5_options_w_walking
+      type   = 'mc_buttons',
+      id     = 'cbc_q3_w_walking',
+      label  = "(3 of 10) Select the **worst** option",
+      option = cbc3_options_w_walking,
+      direction = "vertical"
   )
   sd_question(
-    type   = 'mc_buttons',
-    id     = 'cbc_q5_w_sports',
-    label  = "(5 of 10) Select the **worst** option",
-    option = cbc5_options_w_sports
+      type   = 'mc_buttons',
+      id     = 'cbc_q3_w_sports',
+      label  = "(3 of 10) Select the **worst** option",
+      option = cbc3_options_w_sports,
+      direction = "vertical"
   )
   sd_question(
-    type   = 'mc_buttons',
-    id     = 'cbc_q5_w_concentration',
-    label  = "(5 of 10) Select the **worst** option",
-    option = cbc5_options_w_concentration
+      type   = 'mc_buttons',
+      id     = 'cbc_q3_w_concentration',
+      label  = "(3 of 10) Select the **worst** option",
+      option = cbc3_options_w_concentration,
+      direction = "vertical"
   )
   sd_question(
-    type   = 'mc_buttons',
-    id     = 'cbc_q5_w_embarrassed',
-    label  = "(5 of 10) Select the **worst** option",
-    option = cbc5_options_w_embarrassed
+      type   = 'mc_buttons',
+      id     = 'cbc_q3_w_embarrassed',
+      label  = "(3 of 10) Select the **worst** option",
+      option = cbc3_options_w_embarrassed,
+      direction = "vertical"
   )
   sd_question(
-    type   = 'mc_buttons',
-    id     = 'cbc_q5_w_unhappiness',
-    label  = "(5 of 10) Select the **worst** option",
-    option = cbc5_options_w_unhappiness
+      type   = 'mc_buttons',
+      id     = 'cbc_q3_w_unhappiness',
+      label  = "(3 of 10) Select the **worst** option",
+      option = cbc3_options_w_unhappiness,
+      direction = "vertical"
   )
   sd_question(
-    type   = 'mc_buttons',
-    id     = 'cbc_q5_w_treated',
-    label  = "(5 of 10) Select the **worst** option",
-    option = cbc5_options_w_treated
-  )
-  
-  ###############################################################################
-  sd_question(
-    type   = 'mc_buttons',
-    id     = 'cbc_q6',
-    label  = "(6 of 10) Select the **best** option",
-    option = cbc6_options
-  )
-  
-  sd_question(
-    type   = 'mc_buttons',
-    id     = 'cbc_q6_w_tired',
-    label  = "(6 of 10) Select the **worst** option",
-    option = cbc6_options_w_tired
-  )
-  sd_question(
-    type   = 'mc_buttons',
-    id     = 'cbc_q6_w_walking',
-    label  = "(6 of 10) Select the **worst** option",
-    option = cbc6_options_w_walking
-  )
-  sd_question(
-    type   = 'mc_buttons',
-    id     = 'cbc_q6_w_sports',
-    label  = "(6 of 10) Select the **worst** option",
-    option = cbc6_options_w_sports
-  )
-  sd_question(
-    type   = 'mc_buttons',
-    id     = 'cbc_q6_w_concentration',
-    label  = "(6 of 10) Select the **worst** option",
-    option = cbc6_options_w_concentration
-  )
-  sd_question(
-    type   = 'mc_buttons',
-    id     = 'cbc_q6_w_embarrassed',
-    label  = "(6 of 10) Select the **worst** option",
-    option = cbc6_options_w_embarrassed
-  )
-  sd_question(
-    type   = 'mc_buttons',
-    id     = 'cbc_q6_w_unhappiness',
-    label  = "(6 of 10) Select the **worst** option",
-    option = cbc6_options_w_unhappiness
-  )
-  sd_question(
-    type   = 'mc_buttons',
-    id     = 'cbc_q6_w_treated',
-    label  = "(6 of 10) Select the **worst** option",
-    option = cbc6_options_w_treated
+      type   = 'mc_buttons',
+      id     = 'cbc_q3_w_treated',
+      label  = "(3 of 10) Select the **worst** option",
+      option = cbc3_options_w_treated,
+      direction = "vertical"
   )
   
   ###############################################################################
   sd_question(
-    type   = 'mc_buttons',
-    id     = 'cbc_q7',
-    label  = "(7 of 10) Select the **best** option",
-    option = cbc7_options
+      type   = 'mc_buttons',
+      id     = 'cbc_q4',
+      label  = "(4 of 10) Select the **best** option",
+      option = cbc4_options,
+      direction = "vertical"
   )
   
   sd_question(
-    type   = 'mc_buttons',
-    id     = 'cbc_q7_w_tired',
-    label  = "(7 of 10) Select the **worst** option",
-    option = cbc7_options_w_tired
+      type   = 'mc_buttons',
+      id     = 'cbc_q4_w_tired',
+      label  = "(4 of 10) Select the **worst** option",
+      option = cbc4_options_w_tired,
+      direction = "vertical"
   )
   sd_question(
-    type   = 'mc_buttons',
-    id     = 'cbc_q7_w_walking',
-    label  = "(7 of 10) Select the **worst** option",
-    option = cbc7_options_w_walking
+      type   = 'mc_buttons',
+      id     = 'cbc_q4_w_walking',
+      label  = "(4 of 10) Select the **worst** option",
+      option = cbc4_options_w_walking,
+      direction = "vertical"
   )
   sd_question(
-    type   = 'mc_buttons',
-    id     = 'cbc_q7_w_sports',
-    label  = "(7 of 10) Select the **worst** option",
-    option = cbc7_options_w_sports
+      type   = 'mc_buttons',
+      id     = 'cbc_q4_w_sports',
+      label  = "(4 of 10) Select the **worst** option",
+      option = cbc4_options_w_sports,
+      direction = "vertical"
   )
   sd_question(
-    type   = 'mc_buttons',
-    id     = 'cbc_q7_w_concentration',
-    label  = "(7 of 10) Select the **worst** option",
-    option = cbc7_options_w_concentration
+      type   = 'mc_buttons',
+      id     = 'cbc_q4_w_concentration',
+      label  = "(4 of 10) Select the **worst** option",
+      option = cbc4_options_w_concentration,
+      direction = "vertical"
   )
   sd_question(
-    type   = 'mc_buttons',
-    id     = 'cbc_q7_w_embarrassed',
-    label  = "(7 of 10) Select the **worst** option",
-    option = cbc7_options_w_embarrassed
+      type   = 'mc_buttons',
+      id     = 'cbc_q4_w_embarrassed',
+      label  = "(4 of 10) Select the **worst** option",
+      option = cbc4_options_w_embarrassed,
+      direction = "vertical"
   )
   sd_question(
-    type   = 'mc_buttons',
-    id     = 'cbc_q7_w_unhappiness',
-    label  = "(7 of 10) Select the **worst** option",
-    option = cbc7_options_w_unhappiness
+      type   = 'mc_buttons',
+      id     = 'cbc_q4_w_unhappiness',
+      label  = "(4 of 10) Select the **worst** option",
+      option = cbc4_options_w_unhappiness,
+      direction = "vertical"
   )
   sd_question(
-    type   = 'mc_buttons',
-    id     = 'cbc_q7_w_treated',
-    label  = "(7 of 10) Select the **worst** option",
-    option = cbc7_options_w_treated
+      type   = 'mc_buttons',
+      id     = 'cbc_q4_w_treated',
+      label  = "(4 of 10) Select the **worst** option",
+      option = cbc4_options_w_treated,
+      direction = "vertical"
   )
   
   ###############################################################################
   sd_question(
-    type   = 'mc_buttons',
-    id     = 'cbc_q8',
-    label  = "(8 of 10) Select the **best** option",
-    option = cbc8_options
+      type   = 'mc_buttons',
+      id     = 'cbc_q5',
+      label  = "(5 of 10) Select the **best** option",
+      option = cbc5_options,
+      direction = "vertical"
   )
   
   sd_question(
-    type   = 'mc_buttons',
-    id     = 'cbc_q8_w_tired',
-    label  = "(8 of 10) Select the **worst** option",
-    option = cbc8_options_w_tired
+      type   = 'mc_buttons',
+      id     = 'cbc_q5_w_tired',
+      label  = "(5 of 10) Select the **worst** option",
+      option = cbc5_options_w_tired,
+      direction = "vertical"
   )
   sd_question(
-    type   = 'mc_buttons',
-    id     = 'cbc_q8_w_walking',
-    label  = "(8 of 10) Select the **worst** option",
-    option = cbc8_options_w_walking
+      type   = 'mc_buttons',
+      id     = 'cbc_q5_w_walking',
+      label  = "(5 of 10) Select the **worst** option",
+      option = cbc5_options_w_walking,
+      direction = "vertical"
   )
   sd_question(
-    type   = 'mc_buttons',
-    id     = 'cbc_q8_w_sports',
-    label  = "(8 of 10) Select the **worst** option",
-    option = cbc8_options_w_sports
+      type   = 'mc_buttons',
+      id     = 'cbc_q5_w_sports',
+      label  = "(5 of 10) Select the **worst** option",
+      option = cbc5_options_w_sports,
+      direction = "vertical"
   )
   sd_question(
-    type   = 'mc_buttons',
-    id     = 'cbc_q8_w_concentration',
-    label  = "(8 of 10) Select the **worst** option",
-    option = cbc8_options_w_concentration
+      type   = 'mc_buttons',
+      id     = 'cbc_q5_w_concentration',
+      label  = "(5 of 10) Select the **worst** option",
+      option = cbc5_options_w_concentration,
+      direction = "vertical"
   )
   sd_question(
-    type   = 'mc_buttons',
-    id     = 'cbc_q8_w_embarrassed',
-    label  = "(8 of 10) Select the **worst** option",
-    option = cbc8_options_w_embarrassed
+      type   = 'mc_buttons',
+      id     = 'cbc_q5_w_embarrassed',
+      label  = "(5 of 10) Select the **worst** option",
+      option = cbc5_options_w_embarrassed,
+      direction = "vertical"
   )
   sd_question(
-    type   = 'mc_buttons',
-    id     = 'cbc_q8_w_unhappiness',
-    label  = "(8 of 10) Select the **worst** option",
-    option = cbc8_options_w_unhappiness
+      type   = 'mc_buttons',
+      id     = 'cbc_q5_w_unhappiness',
+      label  = "(5 of 10) Select the **worst** option",
+      option = cbc5_options_w_unhappiness,
+      direction = "vertical"
   )
   sd_question(
-    type   = 'mc_buttons',
-    id     = 'cbc_q8_w_treated',
-    label  = "(8 of 10) Select the **worst** option",
-    option = cbc8_options_w_treated
+      type   = 'mc_buttons',
+      id     = 'cbc_q5_w_treated',
+      label  = "(5 of 10) Select the **worst** option",
+      option = cbc5_options_w_treated,
+      direction = "vertical"
   )
+  
   ###############################################################################
   sd_question(
-    type   = 'mc_buttons',
-    id     = 'cbc_q9',
-    label  = "(9 of 10) Select the **best** option",
-    option = cbc9_options
+      type   = 'mc_buttons',
+      id     = 'cbc_q6',
+      label  = "(6 of 10) Select the **best** option",
+      option = cbc6_options,
+      direction = "vertical"
   )
   
   sd_question(
-    type   = 'mc_buttons',
-    id     = 'cbc_q9_w_tired',
-    label  = "(9 of 10) Select the **worst** option",
-    option = cbc9_options_w_tired
+      type   = 'mc_buttons',
+      id     = 'cbc_q6_w_tired',
+      label  = "(6 of 10) Select the **worst** option",
+      option = cbc6_options_w_tired,
+      direction = "vertical"
   )
   sd_question(
-    type   = 'mc_buttons',
-    id     = 'cbc_q9_w_walking',
-    label  = "(9 of 10) Select the **worst** option",
-    option = cbc9_options_w_walking
+      type   = 'mc_buttons',
+      id     = 'cbc_q6_w_walking',
+      label  = "(6 of 10) Select the **worst** option",
+      option = cbc6_options_w_walking,
+      direction = "vertical"
   )
   sd_question(
-    type   = 'mc_buttons',
-    id     = 'cbc_q9_w_sports',
-    label  = "(9 of 10) Select the **worst** option",
-    option = cbc9_options_w_sports
+      type   = 'mc_buttons',
+      id     = 'cbc_q6_w_sports',
+      label  = "(6 of 10) Select the **worst** option",
+      option = cbc6_options_w_sports,
+      direction = "vertical"
   )
   sd_question(
-    type   = 'mc_buttons',
-    id     = 'cbc_q9_w_concentration',
-    label  = "(9 of 10) Select the **worst** option",
-    option = cbc9_options_w_concentration
+      type   = 'mc_buttons',
+      id     = 'cbc_q6_w_concentration',
+      label  = "(6 of 10) Select the **worst** option",
+      option = cbc6_options_w_concentration,
+      direction = "vertical"
   )
   sd_question(
-    type   = 'mc_buttons',
-    id     = 'cbc_q9_w_embarrassed',
-    label  = "(9 of 10) Select the **worst** option",
-    option = cbc9_options_w_embarrassed
+      type   = 'mc_buttons',
+      id     = 'cbc_q6_w_embarrassed',
+      label  = "(6 of 10) Select the **worst** option",
+      option = cbc6_options_w_embarrassed,
+      direction = "vertical"
   )
   sd_question(
-    type   = 'mc_buttons',
-    id     = 'cbc_q9_w_unhappiness',
-    label  = "(9 of 10) Select the **worst** option",
-    option = cbc9_options_w_unhappiness
+      type   = 'mc_buttons',
+      id     = 'cbc_q6_w_unhappiness',
+      label  = "(6 of 10) Select the **worst** option",
+      option = cbc6_options_w_unhappiness,
+      direction = "vertical"
   )
   sd_question(
-    type   = 'mc_buttons',
-    id     = 'cbc_q9_w_treated',
-    label  = "(9 of 10) Select the **worst** option",
-    option = cbc9_options_w_treated
+      type   = 'mc_buttons',
+      id     = 'cbc_q6_w_treated',
+      label  = "(6 of 10) Select the **worst** option",
+      option = cbc6_options_w_treated,
+      direction = "vertical"
   )
+  
   ###############################################################################
   sd_question(
-    type   = 'mc_buttons',
-    id     = 'cbc_q10',
-    label  = "(10 of 10) Select the **best** option",
-    option = cbc10_options
+      type   = 'mc_buttons',
+      id     = 'cbc_q7',
+      label  = "(7 of 10) Select the **best** option",
+      option = cbc7_options,
+      direction = "vertical"
   )
   
   sd_question(
-    type   = 'mc_buttons',
-    id     = 'cbc_q10_w_tired',
-    label  = "(10 of 10) Select the **worst** option",
-    option = cbc10_options_w_tired
+      type   = 'mc_buttons',
+      id     = 'cbc_q7_w_tired',
+      label  = "(7 of 10) Select the **worst** option",
+      option = cbc7_options_w_tired,
+      direction = "vertical"
   )
   sd_question(
-    type   = 'mc_buttons',
-    id     = 'cbc_q10_w_walking',
-    label  = "(10 of 10) Select the **worst** option",
-    option = cbc10_options_w_walking
+      type   = 'mc_buttons',
+      id     = 'cbc_q7_w_walking',
+      label  = "(7 of 10) Select the **worst** option",
+      option = cbc7_options_w_walking,
+      direction = "vertical"
   )
   sd_question(
-    type   = 'mc_buttons',
-    id     = 'cbc_q10_w_sports',
-    label  = "(10 of 10) Select the **worst** option",
-    option = cbc10_options_w_sports
+      type   = 'mc_buttons',
+      id     = 'cbc_q7_w_sports',
+      label  = "(7 of 10) Select the **worst** option",
+      option = cbc7_options_w_sports,
+      direction = "vertical"
   )
   sd_question(
-    type   = 'mc_buttons',
-    id     = 'cbc_q10_w_concentration',
-    label  = "(10 of 10) Select the **worst** option",
-    option = cbc10_options_w_concentration
+      type   = 'mc_buttons',
+      id     = 'cbc_q7_w_concentration',
+      label  = "(7 of 10) Select the **worst** option",
+      option = cbc7_options_w_concentration,
+      direction = "vertical"
   )
   sd_question(
-    type   = 'mc_buttons',
-    id     = 'cbc_q10_w_embarrassed',
-    label  = "(10 of 10) Select the **worst** option",
-    option = cbc10_options_w_embarrassed
+      type   = 'mc_buttons',
+      id     = 'cbc_q7_w_embarrassed',
+      label  = "(7 of 10) Select the **worst** option",
+      option = cbc7_options_w_embarrassed,
+      direction = "vertical"
   )
   sd_question(
-    type   = 'mc_buttons',
-    id     = 'cbc_q10_w_unhappiness',
-    label  = "(10 of 10) Select the **worst** option",
-    option = cbc10_options_w_unhappiness
+      type   = 'mc_buttons',
+      id     = 'cbc_q7_w_unhappiness',
+      label  = "(7 of 10) Select the **worst** option",
+      option = cbc7_options_w_unhappiness,
+      direction = "vertical"
   )
   sd_question(
-    type   = 'mc_buttons',
-    id     = 'cbc_q10_w_treated',
-    label  = "(10 of 10) Select the **worst** option",
-    option = cbc10_options_w_treated
+      type   = 'mc_buttons',
+      id     = 'cbc_q7_w_treated',
+      label  = "(7 of 10) Select the **worst** option",
+      option = cbc7_options_w_treated,
+      direction = "vertical"
+  )
+  
+  ###############################################################################
+  sd_question(
+      type   = 'mc_buttons',
+      id     = 'cbc_q8',
+      label  = "(8 of 10) Select the **best** option",
+      option = cbc8_options,
+      direction = "vertical"
+  )
+  
+  sd_question(
+      type   = 'mc_buttons',
+      id     = 'cbc_q8_w_tired',
+      label  = "(8 of 10) Select the **worst** option",
+      option = cbc8_options_w_tired,
+      direction = "vertical"
+  )
+  sd_question(
+      type   = 'mc_buttons',
+      id     = 'cbc_q8_w_walking',
+      label  = "(8 of 10) Select the **worst** option",
+      option = cbc8_options_w_walking,
+      direction = "vertical"
+  )
+  sd_question(
+      type   = 'mc_buttons',
+      id     = 'cbc_q8_w_sports',
+      label  = "(8 of 10) Select the **worst** option",
+      option = cbc8_options_w_sports,
+      direction = "vertical"
+  )
+  sd_question(
+      type   = 'mc_buttons',
+      id     = 'cbc_q8_w_concentration',
+      label  = "(8 of 10) Select the **worst** option",
+      option = cbc8_options_w_concentration,
+      direction = "vertical"
+  )
+  sd_question(
+      type   = 'mc_buttons',
+      id     = 'cbc_q8_w_embarrassed',
+      label  = "(8 of 10) Select the **worst** option",
+      option = cbc8_options_w_embarrassed,
+      direction = "vertical"
+  )
+  sd_question(
+      type   = 'mc_buttons',
+      id     = 'cbc_q8_w_unhappiness',
+      label  = "(8 of 10) Select the **worst** option",
+      option = cbc8_options_w_unhappiness,
+      direction = "vertical"
+  )
+  sd_question(
+      type   = 'mc_buttons',
+      id     = 'cbc_q8_w_treated',
+      label  = "(8 of 10) Select the **worst** option",
+      option = cbc8_options_w_treated,
+      direction = "vertical"
   )
   ###############################################################################
+  sd_question(
+      type   = 'mc_buttons',
+      id     = 'cbc_q9',
+      label  = "(9 of 10) Select the **best** option",
+      option = cbc9_options,
+      direction = "vertical"
+  )
+  
+  sd_question(
+      type   = 'mc_buttons',
+      id     = 'cbc_q9_w_tired',
+      label  = "(9 of 10) Select the **worst** option",
+      option = cbc9_options_w_tired,
+      direction = "vertical"
+  )
+  sd_question(
+      type   = 'mc_buttons',
+      id     = 'cbc_q9_w_walking',
+      label  = "(9 of 10) Select the **worst** option",
+      option = cbc9_options_w_walking,
+      direction = "vertical"
+  )
+  sd_question(
+      type   = 'mc_buttons',
+      id     = 'cbc_q9_w_sports',
+      label  = "(9 of 10) Select the **worst** option",
+      option = cbc9_options_w_sports,
+      direction = "vertical"
+  )
+  sd_question(
+      type   = 'mc_buttons',
+      id     = 'cbc_q9_w_concentration',
+      label  = "(9 of 10) Select the **worst** option",
+      option = cbc9_options_w_concentration,
+      direction = "vertical"
+  )
+  sd_question(
+      type   = 'mc_buttons',
+      id     = 'cbc_q9_w_embarrassed',
+      label  = "(9 of 10) Select the **worst** option",
+      option = cbc9_options_w_embarrassed,
+      direction = "vertical"
+  )
+  sd_question(
+      type   = 'mc_buttons',
+      id     = 'cbc_q9_w_unhappiness',
+      label  = "(9 of 10) Select the **worst** option",
+      option = cbc9_options_w_unhappiness,
+      direction = "vertical"
+  )
+  sd_question(
+      type   = 'mc_buttons',
+      id     = 'cbc_q9_w_treated',
+      label  = "(9 of 10) Select the **worst** option",
+      option = cbc9_options_w_treated,
+      direction = "vertical"
+  )
+  ###############################################################################
+  sd_question(
+      type   = 'mc_buttons',
+      id     = 'cbc_q10',
+      label  = "(10 of 10) Select the **best** option",
+      option = cbc10_options,
+      direction = "vertical"
+  )
+  
+  sd_question(
+      type   = 'mc_buttons',
+      id     = 'cbc_q10_w_tired',
+      label  = "(10 of 10) Select the **worst** option",
+      option = cbc10_options_w_tired,
+      direction = "vertical"
+  )
+  sd_question(
+      type   = 'mc_buttons',
+      id     = 'cbc_q10_w_walking',
+      label  = "(10 of 10) Select the **worst** option",
+      option = cbc10_options_w_walking,
+      direction = "vertical"
+  )
+  sd_question(
+      type   = 'mc_buttons',
+      id     = 'cbc_q10_w_sports',
+      label  = "(10 of 10) Select the **worst** option",
+      option = cbc10_options_w_sports,
+      direction = "vertical"
+  )
+  sd_question(
+      type   = 'mc_buttons',
+      id     = 'cbc_q10_w_concentration',
+      label  = "(10 of 10) Select the **worst** option",
+      option = cbc10_options_w_concentration,
+      direction = "vertical"
+  )
+  sd_question(
+      type   = 'mc_buttons',
+      id     = 'cbc_q10_w_embarrassed',
+      label  = "(10 of 10) Select the **worst** option",
+      option = cbc10_options_w_embarrassed,
+      direction = "vertical"
+  )
+  sd_question(
+      type   = 'mc_buttons',
+      id     = 'cbc_q10_w_unhappiness',
+      label  = "(10 of 10) Select the **worst** option",
+      option = cbc10_options_w_unhappiness,
+      direction = "vertical"
+  )
+  sd_question(
+      type   = 'mc_buttons',
+      id     = 'cbc_q10_w_treated',
+      label  = "(10 of 10) Select the **worst** option",
+      option = cbc10_options_w_treated,
+      direction = "vertical"
+  )
+  ###############################################################################
+  
 
 
   # Define any conditional skip logic here (skip to page if a condition is true)
   sd_skip_if(
     input$screenout == "blue" ~ "end_screenout",
-    input$consent_age == "no" ~ "end_consent",
+    input$consent == "no" ~ "end_consent",
     input$consent_understand == "no" ~ "end_consent"
   )
 
