@@ -28,9 +28,17 @@ server <- function(input, output, session) {
 
   # Using URL parameters to obtain prolific PIDs
   sd_store_value(sd_get_url_pars("PROLIFIC_PID"), id = "PROLIFIC_PID")
+  sd_store_value(sd_get_url_pars("SESSION_ID"), id = "SESSION_PID")
+  sd_store_value(sd_get_url_pars("STUDY_ID"), id = "STUDY_ID")
+    
+  
+  
+  #############################################################################
+  # Random assignment
+  #############################################################################
   
   # Read in the full survey design file
-  design <- readr::read_csv("BWS_design_for_1000_participants.csv")
+  design <- readr::read_csv("choice_questions.csv")
 
   # Sample a random respondentID
   respondentID <- sample(design$respID, 1)
@@ -38,6 +46,35 @@ server <- function(input, output, session) {
   # Store the respondentID
   sd_store_value(respondentID, "respID")
 
+  
+  #############################################################################
+  # Assignment without replacement (not working)
+  #############################################################################
+  
+  # Read in the full survey design file
+  design <- readr::read_csv("choice_questions.csv")
+  
+  # Get all previously used respIDs
+  data <- sd_get_data(db)
+  respIDs <- unique(data$respID)
+  
+  # Sample a respID from full design file
+  respID <- 1
+  # Keep sampling until you get one that hasn't yet been used
+  while (respID %in% respIDs) {
+      respID <- sample(design$respID, 1)
+  }
+  
+  # Sample a random respondentID
+  respondentID <- respID
+  
+  # Store the respondentID
+  sd_store_value(respondentID, "respID")
+
+
+  #############################################################################
+  
+  
   # Filter for the rows for the chosen respondentID
   df <- design %>%
     filter(respID == respondentID)

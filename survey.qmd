@@ -1,15 +1,16 @@
+::: callout-note
 ---
 format: html
 echo: false
 warning: false
 ---
+:::
 
 ```{r}
 library(surveydown)
 ```
 
 ::: {#welcome .sd-page}
-
 # Welcome to our survey!
 
 This online survey contains a series of questions and exercises about health and quality of life. In some questions, we will ask about your own health, and to compare different health problems. In other questions, we will ask them to make choices between different scenarios involving poor health and disability. There are no right or wrong answers - we are just interested in your opinion.
@@ -17,11 +18,9 @@ This online survey contains a series of questions and exercises about health and
 ```{r}
 sd_next()
 ```
-
 :::
 
 ::: {#consent .sd-page}
-
 # Consent
 
 This survey is being conducted by researchers at Newcastle University. We will not be collecting any identifying data, such as your name or address. The whole survey will take approximately 10 to 15 minutes to complete. Your participation is voluntary and you may stop the survey at any time.
@@ -50,15 +49,12 @@ sd_question(
 )
 ```
 
-
 ```{r}
 sd_next()
 ```
-
 :::
 
 ::: {#screening .sd-page}
-
 # Attention Check
 
 Please click **"Red"**, if you choose "Blue" you'll be screened out.
@@ -76,123 +72,151 @@ sd_question(
 
 sd_next()
 ```
-
 :::
 
-
 ::: {#educational .sd-page}
-
 # Information Page
 
-In this survey we'd like you to consider a scenario in which you can choose between two health states with different qualities. Each health state is represented by 7 areas of quality of life that we think are important to young people. 
+In this survey we'd like you to consider a scenario in which you can choose between two health states with different qualities. Each health state is represented by 7 areas of quality of life that we think are important to young people.
 
 Within each area of quality of life there are 5 levels which range from **(Never, Almost never, Sometimes, Often and Always)**. Let's learn about these 7 areas of quality of life.
 
-
 <!-- | Attribute         | Level Description                                         | -->
-<!-- |-------------------|-----------------------------------------------------------| -->
-<!-- | **Tiredness**      | I **never** get tired.                                   | -->
-<!-- |                   | I **almost never** get tired.                            | -->
-<!-- |                   | I **sometimes** get tired.                               | -->
-<!-- |                   | I **often** get tired.                                   | -->
-<!-- |                   | I **always** get tired.                                  | -->
-<!-- | **Walking**        | I **never** struggle to keep up when walking.            | -->
-<!-- |                   | I **almost never** struggle to keep up when walking.     | -->
-<!-- |                   | I **sometimes** struggle to keep up when walking.        | -->
-<!-- |                   | I **often** struggle to keep up when walking.            | -->
-<!-- |                   | I **always** struggle to keep up when walking.           | -->
-<!-- | **Sports**         | I **never** avoid doing sports.                          | -->
-<!-- |                   | I **almost never** avoid doing sports.                   | -->
-<!-- |                   | I **sometimes** avoid doing sports.                      | -->
-<!-- |                   | I **often** avoid doing sports.                          | -->
-<!-- |                   | I **always** avoid doing sports.                         | -->
-<!-- | **Concentration**  | I **never** struggle to concentrate.                     | -->
-<!-- |                   | I **almost never** struggle to concentrate.              | -->
-<!-- |                   | I **sometimes** struggle to concentrate.                 | -->
-<!-- |                   | I **often** struggle to concentrate.                     | -->
-<!-- |                   | I **always** struggle to concentrate.                    | -->
-<!-- | **Embarrassment**  | I **never** feel embarrassed shopping.                   | -->
-<!-- |                   | I **almost never** feel embarrassed shopping.            | -->
-<!-- |                   | I **sometimes** feel embarrassed shopping.               | -->
-<!-- |                   | I **often** feel embarrassed shopping.                   | -->
-<!-- |                   | I **always** feel embarrassed shopping.                  | -->
-<!-- | **Unhappiness**    | I **never** feel unhappy because of others.              | -->
-<!-- |                   | I **almost never** feel unhappy because of others.       | -->
-<!-- |                   | I **sometimes** feel unhappy because of others.          | -->
-<!-- |                   | I **often** feel unhappy because of others.              | -->
-<!-- |                   | I **always** feel unhappy because of others.             | -->
-<!-- | **Treated**        | People **never** treat me differently.                   | -->
-<!-- |                   | People **almost never** treat me differently.            | -->
-<!-- |                   | People **sometimes** treat me differently.               | -->
-<!-- |                   | People **often** treat me differently.                   | -->
-<!-- |                   | People **always** treat me differently.                  | -->
 
+<!-- |-------------------|-----------------------------------------------------------| -->
+
+<!-- | **Tiredness**      | I **never** get tired.                                   | -->
+
+<!-- |                   | I **almost never** get tired.                            | -->
+
+<!-- |                   | I **sometimes** get tired.                               | -->
+
+<!-- |                   | I **often** get tired.                                   | -->
+
+<!-- |                   | I **always** get tired.                                  | -->
+
+<!-- | **Walking**        | I **never** struggle to keep up when walking.            | -->
+
+<!-- |                   | I **almost never** struggle to keep up when walking.     | -->
+
+<!-- |                   | I **sometimes** struggle to keep up when walking.        | -->
+
+<!-- |                   | I **often** struggle to keep up when walking.            | -->
+
+<!-- |                   | I **always** struggle to keep up when walking.           | -->
+
+<!-- | **Sports**         | I **never** avoid doing sports.                          | -->
+
+<!-- |                   | I **almost never** avoid doing sports.                   | -->
+
+<!-- |                   | I **sometimes** avoid doing sports.                      | -->
+
+<!-- |                   | I **often** avoid doing sports.                          | -->
+
+<!-- |                   | I **always** avoid doing sports.                         | -->
+
+<!-- | **Concentration**  | I **never** struggle to concentrate.                     | -->
+
+<!-- |                   | I **almost never** struggle to concentrate.              | -->
+
+<!-- |                   | I **sometimes** struggle to concentrate.                 | -->
+
+<!-- |                   | I **often** struggle to concentrate.                     | -->
+
+<!-- |                   | I **always** struggle to concentrate.                    | -->
+
+<!-- | **Embarrassment**  | I **never** feel embarrassed shopping.                   | -->
+
+<!-- |                   | I **almost never** feel embarrassed shopping.            | -->
+
+<!-- |                   | I **sometimes** feel embarrassed shopping.               | -->
+
+<!-- |                   | I **often** feel embarrassed shopping.                   | -->
+
+<!-- |                   | I **always** feel embarrassed shopping.                  | -->
+
+<!-- | **Unhappiness**    | I **never** feel unhappy because of others.              | -->
+
+<!-- |                   | I **almost never** feel unhappy because of others.       | -->
+
+<!-- |                   | I **sometimes** feel unhappy because of others.          | -->
+
+<!-- |                   | I **often** feel unhappy because of others.              | -->
+
+<!-- |                   | I **always** feel unhappy because of others.             | -->
+
+<!-- | **Treated**        | People **never** treat me differently.                   | -->
+
+<!-- |                   | People **almost never** treat me differently.            | -->
+
+<!-- |                   | People **sometimes** treat me differently.               | -->
+
+<!-- |                   | People **often** treat me differently.                   | -->
+
+<!-- |                   | People **always** treat me differently.                  | -->
 
 ## Tiredness
 
-- I **never** get tired.
-- I **almost never** get tired.
-- I **sometimes** get tired.
-- I **often** get tired.
-- I **always** get tired.
+-   I **never** get tired.
+-   I **almost never** get tired.
+-   I **sometimes** get tired.
+-   I **often** get tired.
+-   I **always** get tired.
 
 ## Walking
 
-- I **never** struggle to keep up when I am walking around with others.
-- I **almost never** struggle to keep up when I am walking around with others.
-- I **sometimes** struggle to keep up when I am walking around with others.
-- I **often** struggle to keep up when I am walking around with others.
-- I **always** struggle to keep up when I am walking around with others.
+-   I **never** struggle to keep up when I am walking around with others.
+-   I **almost never** struggle to keep up when I am walking around with others.
+-   I **sometimes** struggle to keep up when I am walking around with others.
+-   I **often** struggle to keep up when I am walking around with others.
+-   I **always** struggle to keep up when I am walking around with others.
 
 ## Sports
 
-- I **never** avoid doing sports.
-- I **almost never** avoid doing sports.
-- I **sometimes** avoid doing sports.
-- I **often** avoid doing sports.
-- I **always** avoid doing sports.
+-   I **never** avoid doing sports.
+-   I **almost never** avoid doing sports.
+-   I **sometimes** avoid doing sports.
+-   I **often** avoid doing sports.
+-   I **always** avoid doing sports.
 
 ## Concentration
 
-- I **never** struggle to concentrate on my studies/work.
-- I **almost never** struggle to concentrate on my studies/work.
-- I **sometimes** struggle to concentrate on my studies/work.
-- I **often** struggle to concentrate on my studies/work.
-- I **always** struggle to concentrate on my studies/work.
+-   I **never** struggle to concentrate on my studies/work.
+-   I **almost never** struggle to concentrate on my studies/work.
+-   I **sometimes** struggle to concentrate on my studies/work.
+-   I **often** struggle to concentrate on my studies/work.
+-   I **always** struggle to concentrate on my studies/work.
 
 ## Embarrassment
 
-- I **never** feel embarrassed shopping for clothes.
-- I **almost never** feel embarrassed shopping for clothes.
-- I **sometimes** struggle to concentrate on my studies/work.
-- I **often** feel embarrassed shopping for clothes.
-- I **always** feel embarrassed shopping for clothes.
+-   I **never** feel embarrassed shopping for clothes.
+-   I **almost never** feel embarrassed shopping for clothes.
+-   I **sometimes** struggle to concentrate on my studies/work.
+-   I **often** feel embarrassed shopping for clothes.
+-   I **always** feel embarrassed shopping for clothes.
 
 ## Unhappiness
 
-- I **never** feel unhappy because I am unable to do the same things as others.
-- I **almost never** feel unhappy because I am unable to do the same things as others.
-- I **sometimes** feel unhappy because I am unable to do the same things as others.
-- I **often** feel unhappy because I am unable to do the same things as others.
-- I **always** feel unhappy because I am unable to do the same things as others.
+-   I **never** feel unhappy because I am unable to do the same things as others.
+-   I **almost never** feel unhappy because I am unable to do the same things as others.
+-   I **sometimes** feel unhappy because I am unable to do the same things as others.
+-   I **often** feel unhappy because I am unable to do the same things as others.
+-   I **always** feel unhappy because I am unable to do the same things as others.
 
 ## Treated differently
 
-- People **never** treat me differently when I go out.
-- People **almost never** treat me differently when I go out.
-- People **sometimes** treat me differently when I go out.
-- People **often** treat me differently when I go out.
-- People **always** treat me differently when I go out.
-
+-   People **never** treat me differently when I go out.
+-   People **almost never** treat me differently when I go out.
+-   People **sometimes** treat me differently when I go out.
+-   People **often** treat me differently when I go out.
+-   People **always** treat me differently when I go out.
 
 ```{r}
 sd_next()
 ```
-
 :::
 
 ::: {#waite_descriptive .sd-page}
-
 # Your health
 
 Using the areas of health we have shown you please answer the following questions about your health. Your answer to these questions will be a health state.
@@ -259,14 +283,16 @@ sd_question(
 
 sd_next()
 ```
-
 :::
 
 ::: {#cbc_practice .sd-page}
-
 # Practice Question
 
-Your response to the previous questions describes one health state. We'll now begin the choice tasks. This first question is a practice question. Please read through the health states carefully and select the health state you prefer.
+Your response to the previous questions describes one health state. We'll now begin the choice tasks. This first question is a practice question. Please read through the health state carefully and select the best and worst option.
+
+::: callout-note
+There are no right or wrong answers. Please select the option you think is the best, followed by the option you think is the worst.
+:::
 
 ```{r}
 # Define the option vector
@@ -401,8 +427,7 @@ sd_next()
 :::
 
 ::: {#cbc_intro .sd-page}
-
-# Main Questions 
+# Main Questions
 
 Great work!
 
@@ -411,12 +436,10 @@ We will now show you 10 sets of choice questions starting on the next page. Plea
 ```{r}
 sd_next()
 ```
-
 :::
 
 ::: {#cbc_q1 .sd-page}
-
-# Question 1 
+# Question 1
 
 ```{r}
 sd_output('cbc_q1', type = 'question')
@@ -434,8 +457,8 @@ sd_next()
 :::
 
 ::: {#cbc_q2 .sd-page}
-
 # Question 2
+
 ```{r}
 sd_output('cbc_q2', type = 'question')
 
@@ -452,7 +475,6 @@ sd_next()
 :::
 
 ::: {#cbc_q3 .sd-page}
-
 # Question 3
 
 ```{r}
@@ -471,7 +493,6 @@ sd_next()
 :::
 
 ::: {#cbc_q4 .sd-page}
-
 # Question 4
 
 ```{r}
@@ -489,9 +510,7 @@ sd_next()
 ```
 :::
 
-
 ::: {#cbc_q5 .sd-page}
-
 # Question 5
 
 ```{r}
@@ -510,7 +529,6 @@ sd_next()
 :::
 
 ::: {#cbc_q6 .sd-page}
-
 # Question 6
 
 ```{r}
@@ -529,7 +547,6 @@ sd_next()
 :::
 
 ::: {#cbc_q7 .sd-page}
-
 # Question 7
 
 ```{r}
@@ -548,7 +565,6 @@ sd_next()
 :::
 
 ::: {#cbc_q8 .sd-page}
-
 # Question 8
 
 ```{r}
@@ -565,8 +581,8 @@ sd_output('cbc_q8_w_treated', type = 'question')
 sd_next()
 ```
 :::
-::: {#cbc_q9 .sd-page}
 
+::: {#cbc_q9 .sd-page}
 # Question 9
 
 ```{r}
@@ -583,8 +599,8 @@ sd_output('cbc_q9_w_treated', type = 'question')
 sd_next()
 ```
 :::
-::: {#cbc_q10 .sd-page}
 
+::: {#cbc_q10 .sd-page}
 # Question 10
 
 ```{r}
@@ -603,7 +619,6 @@ sd_next()
 :::
 
 ::: {#apple_knowledge .sd-page}
-
 # Survey Feedback
 
 Please take a minute to answer the following questions. We'd greatly appreciate your input.
@@ -651,7 +666,6 @@ sd_question(
 
 sd_next()
 ```
-
 :::
 
 ::: {#demographics .sd-page}
@@ -764,14 +778,12 @@ sd_next()
 ```
 :::
 
-
 ::: {#end_normal .sd-page}
-
 # End Page
 
 The survey is finished. Thank you for your feedback!
 
-Please click the button below to complete your participation 
+Please click the button below to complete your participation
 
 ```{r}
 sd_redirect(
@@ -781,11 +793,9 @@ sd_redirect(
   button = TRUE
 )
 ```
-
 :::
 
 ::: {#end_consent .sd-page}
-
 # End Page
 
 The survey is now finished. You may close the window.
@@ -798,11 +808,9 @@ sd_redirect(
   button = TRUE
 )
 ```
-
 :::
 
 ::: {#end_screenout .sd-page}
-
 # End Page
 
 Sorry, we wanted you to select the **red** button.
@@ -817,5 +825,4 @@ sd_redirect(
   button = TRUE
 )
 ```
-
 :::
