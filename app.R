@@ -23,6 +23,8 @@ db <- sd_database(
   ignore = TRUE
 )
 
+data <- sd_get_data(db)
+
 # Server setup
 server <- function(input, output, session) {
 
@@ -34,40 +36,39 @@ server <- function(input, output, session) {
   
   
   #############################################################################
-  # Random assignment
+  # Random assignment (block out)
   #############################################################################
   
+  # # Read in the full survey design file
+  # design <- readr::read_csv("choice_questions.csv")
+  # 
+  # # Sample a random respondentID
+  # respondentID <- sample(design$respID, 1)
+  # 
+  # # Store the respondentID
+  # sd_store_value(respondentID, "respID")
+
+  
+  #############################################################################
+  # Assignment without replacement 
+  #############################################################################
+
   # Read in the full survey design file
   design <- readr::read_csv("choice_questions.csv")
-
-  # Sample a random respondentID
-  respondentID <- sample(design$respID, 1)
-
-  # Store the respondentID
-  sd_store_value(respondentID, "respID")
-
   
-  #############################################################################
-  # Assignment without replacement (not working)
-  #############################################################################
-  
-  # Read in the full survey design file
-  design <- readr::read_csv("choice_questions.csv")
-  
-  # Get all previously used respIDs
-  data <- sd_get_data(db)
+  # Obtain already assigned respIDs
   respIDs <- unique(data$respID)
-  
+
   # Sample a respID from full design file
   respID <- 1
   # Keep sampling until you get one that hasn't yet been used
   while (respID %in% respIDs) {
       respID <- sample(design$respID, 1)
   }
-  
+
   # Sample a random respondentID
   respondentID <- respID
-  
+
   # Store the respondentID
   sd_store_value(respondentID, "respID")
 
@@ -1021,7 +1022,8 @@ server <- function(input, output, session) {
   # Database designation and other settings
   sd_server(
     db = db,
-    all_questions_required = TRUE
+    all_questions_required = TRUE,
+    admin_page = TRUE
   )
 
 }
